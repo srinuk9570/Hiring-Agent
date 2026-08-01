@@ -344,9 +344,9 @@ class GeminiProvider:
         import random
         from google.api_core.exceptions import ResourceExhausted
 
-        MAX_RETRIES = 5
-        BASE_DELAY = 10.0  # seconds — base for exponential backoff
-        MAX_DELAY = 120.0  # cap so we never wait more than 2 minutes
+        MAX_RETRIES = 1
+        BASE_DELAY = 2.0  # seconds — base for exponential backoff
+        MAX_DELAY = 5.0  # cap so we never wait more than 2 minutes
 
         # Map options to Gemini parameters
         generation_config = {}
@@ -380,7 +380,9 @@ class GeminiProvider:
                     # All retries exhausted — re-raise the original exception.
                     # This surfaces unrecoverable quota errors (RPD, TPM, etc.)
                     # instead of silently failing or returning bad data.
-                    raise
+                    raise Exception(
+                        "Gemini API quota exceeded. Please wait a few minutes or use another API key."
+                    )
 
                 # Parse the API-suggested retry delay from the error message
                 match = re.search(r"retry[_ ]in\s+([\d.]+)s", str(e), re.IGNORECASE)
