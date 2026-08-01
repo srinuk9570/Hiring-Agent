@@ -1,0 +1,493 @@
+{
+  "id": "94125d3f7432",
+  "owner": "3c1e8dbee9cd",
+  "candidate_name": "Katravath Srinu",
+  "file_name": "Software_Engineer_2.pdf",
+  "created_at": "2026-07-31T06:30:48.182922+00:00",
+  "evaluation": {
+    "scores": {
+      "open_source": {
+        "score": 0.0,
+        "max": 10,
+        "evidence": "None of the GitHub repositories have stars or forks."
+      },
+      "self_projects": {
+        "score": 9.0,
+        "max": 10,
+        "evidence": "The candidate has built several projects including a scalable messaging platform, an AI platform, and a VoIP intrusion detection system. The breadth of experience is impressive."
+      },
+      "production": {
+        "score": 8.0,
+        "max": 10,
+        "evidence": "The candidate's description of the multi-user messaging platform highlights real-world application skills and demonstrates an understanding of scalability, concurrency, and database integration. The AI Platform also shows a good grasp of architectural design."
+      },
+      "technical_skills": {
+        "score": 9.0,
+        "max": 10,
+        "evidence": "The candidate's experience with WebSocket, multi-threaded event processing, RESTful APIs, MongoDB, and various programming languages (Python, JavaScript, TypeScript, C++) demonstrates a strong technical foundation."
+      }
+    },
+    "bonus_points": {
+      "total": 3.0,
+      "breakdown": "The candidate has a high Codeforces rating of 1350. This is an excellent indicator of problem-solving skills and algorithmic proficiency."
+    },
+    "deductions": {
+      "total": 2.0,
+      "reasons": "The GitHub repositories have no stars or forks, indicating limited public engagement with their work. While the projects are well-described, they lack visibility in the open-source community."
+    },
+    "key_strengths": [
+      "Scalable System Design",
+      "Real-time Communication Technologies (WebSocket)",
+      "Multi-threading and Concurrency",
+      "RESTful API Development",
+      "Database Integration (MongoDB)"
+    ],
+    "areas_for_improvement": [
+      "Open Source Contributions: Actively contribute to open source projects to gain broader exposure and collaboration experience.",
+      "GitHub Visibility: Increase the visibility of your GitHub repositories by engaging with the community, seeking feedback, and promoting your work."
+    ]
+  },
+  "resume_text": "=== BASIC INFORMATION ===\nName: Katravath Srinu\nEmail: srinuk9570@gmail.com\nPhone: +91-9347130015\nWebsite: Not provided\nSummary: Aspiring Software Engineer with experience in backend development, AI/ML, and open source contributions.\nLocation: Varanasi, IN\nProfiles:\n  - GitHub: srinuk9570 (https://github.com/srinuk9570)\n  - LinkedIn: katravathsrinu (https://linkedin.com/in/katravathsrinu)\n\n=== WORK EXPERIENCE ===\n1. Backend Software Engineer — Multiple Repositories at Independent Open Source Contributor\n   Period: 2025-01 - 2026-03\n   Description: Contributed 150+ pull requests improving backend functionality, API performance, and code quality across production repositories; collaborated with distributed teams via Git workflows including feature branching, code review, and issue tracking.\n   Key Achievements:\n     • Contributed 150+ pull requests\n     • Optimized REST API response logic\n2. Architect at Enterprise AI Platform\n   Period: 2026-01 - Present\n   Description: Architected and deployed a production-grade multi-module AI platform on AWS EC2 with an LLM-powered chat assistant, AI image generation, analytics dashboard, and a prompt-to-website builder generating sites in under 10 minutes.\n   Key Achievements:\n     • Architected and deployed a production-grade AI platform\n     • Implemented modular architecture with concurrent session management\n3. Developer at VoIP Intrusion Detection System\n   Period: 2025-01 - Present\n   Description: Built a real-time network security pipeline achieving 94% attack classification accuracy across SPIT, REGISTER flooding, and SIP spoofing; analyzed 10+ GB of PCAP traces to identify adversarial patterns.\n   Key Achievements:\n     • Achieved 94% attack classification accuracy\n     • Engineered packet-level feature extraction reducing false positives by 40%\n4. Developer at Real-Time Chat Application\n   Period: 2024-01 - Present\n   Description: Built a scalable multi-user messaging platform with WebSocket-based concurrent connection handling and multi-threaded event processing for low-latency real-time communication across thousands of simultaneous users.\n   Key Achievements:\n     • Built a scalable multi-user messaging platform\n     • Implemented RESTful authentication with persistent MongoDB storage\n\n=== EDUCATION ===\n1. B.Tech in Computer Science and Engineering\n   Institution: Indian Institute of Technology (BHU), Varanasi\n   Period: 2023-07-01 - 2027-05-01\n\n=== PROJECTS ===\n1. Enterprise AI Platform\n   Description: Architected and deployed a production-grade multi-module AI platform on AWS EC2 with an LLM-powered chat assistant, AI image generation, analytics dashboard, and a prompt-to-website builder generating sites in under 10 minutes. Designed modular architecture with concurrent session management, multi-threaded request processing, and a decoupled REST API layer; applied complexity analysis to optimize latency and throughput across simultaneous users.\n2. VoIP Intrusion Detection System\n   Description: Built a real-time network security pipeline achieving 94% attack classification accuracy across SPIT, REGISTER flooding, and SIP spoofing; analyzed 10+ GB of PCAP traces to identify adversarial patterns. Engineered packet-level feature extraction reducing false positives by 40%; applied O(n log n) algorithm optimization for efficient detection on high-throughput concurrent network data streams.\n3. Real-Time Chat Application\n   Description: Built a scalable multi-user messaging platform with WebSocket-based concurrent connection handling and multi-threaded event processing for low-latency real-time communication across thousands of simultaneous users. Implemented RESTful authentication with persistent MongoDB storage; architected for horizontal scalability on distributed infrastructure to support enterprise-level concurrent loads.\n\n=== AWARDS ===\n• HackerRank Software Engineer Intern Certification - HackerRank (None)\n• Codeforces Max Rating: 1350 - Codeforces (None)\n\n=== GITHUB DATA ===\nGitHub Profile:\n- Username: srinuk9570\n- Name: Katravath srinu\n- Bio: None\n- Public Repositories: 11\n- Followers: 0\n- Following: 0\n- Account Created: 2024-09-19T16:34:16Z\n- Last Updated: 2026-03-10T13:20:35Z\n\nGitHub Projects (7 total):\n1. railway-reservation-system\n   Description: My Railway Reservation System project in Django\n   URL: https://github.com/srinuk9570/railway-reservation-system\n   Stars: 0\n   Forks: 0\n   Language: Python\n\n2. btc-technical-dashboard\n   Description: Real-time BTC/USDT technical analysis dashboard using Binance API\n   URL: https://github.com/srinuk9570/btc-technical-dashboard\n   Stars: 0\n   Forks: 0\n   Language: HTML\n\n3. ATS-Backend\n   Description: None\n   URL: https://github.com/srinuk9570/ATS-Backend\n   Stars: 0\n   Forks: 0\n   Language: JavaScript\n\n4. ATS-Frontend\n   Description: ATS Intelligence – Resume & Job Description Matching Platform with AI-powered analysis.\n   URL: https://github.com/srinuk9570/ATS-Frontend\n   Stars: 0\n   Forks: 0\n   Language: JavaScript\n\n5. AI-Resume-Screening\n   Description: AI-powered Resume Screening System using NLP and machine learning to match candidate resumes with job descriptions based on semantic similarity scoring.\n   URL: https://github.com/srinuk9570/AI-Resume-Screening\n   Stars: 0\n   Forks: 0\n   Language: TypeScript\n\n6. linux-http-server-cpp\n   Description: A high-performance multithreaded HTTP server written in C++ on Linux using sockets and pthreads, featuring a custom thread pool, efficient request handling, and performance optimization.\n   URL: https://github.com/srinuk9570/linux-http-server-cpp\n   Stars: 0\n   Forks: 0\n   Language: C++\n\n7. Ecommerce-Website\n   Description: Ecommerce-Website\n   URL: https://github.com/srinuk9570/Ecommerce-Website\n   Stars: 0\n   Forks: 0\n   Language: TypeScript\n\n",
+  "resume_json": {
+    "basics": {
+      "name": "Katravath Srinu",
+      "email": "srinuk9570@gmail.com",
+      "phone": "+91-9347130015",
+      "url": null,
+      "summary": "Aspiring Software Engineer with experience in backend development, AI/ML, and open source contributions.",
+      "location": {
+        "address": null,
+        "postalCode": null,
+        "city": "Varanasi",
+        "countryCode": "IN",
+        "region": null
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "srinuk9570",
+          "url": "https://github.com/srinuk9570"
+        },
+        {
+          "network": "LinkedIn",
+          "username": "katravathsrinu",
+          "url": "https://linkedin.com/in/katravathsrinu"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Independent Open Source Contributor",
+        "position": "Backend Software Engineer — Multiple Repositories",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "2026-03",
+        "summary": "Contributed 150+ pull requests improving backend functionality, API performance, and code quality across production repositories; collaborated with distributed teams via Git workflows including feature branching, code review, and issue tracking.",
+        "highlights": [
+          "Contributed 150+ pull requests",
+          "Optimized REST API response logic"
+        ]
+      },
+      {
+        "name": "Enterprise AI Platform",
+        "position": "Architect",
+        "url": null,
+        "startDate": "2026-01",
+        "endDate": "Present",
+        "summary": "Architected and deployed a production-grade multi-module AI platform on AWS EC2 with an LLM-powered chat assistant, AI image generation, analytics dashboard, and a prompt-to-website builder generating sites in under 10 minutes.",
+        "highlights": [
+          "Architected and deployed a production-grade AI platform",
+          "Implemented modular architecture with concurrent session management"
+        ]
+      },
+      {
+        "name": "VoIP Intrusion Detection System",
+        "position": "Developer",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "Present",
+        "summary": "Built a real-time network security pipeline achieving 94% attack classification accuracy across SPIT, REGISTER flooding, and SIP spoofing; analyzed 10+ GB of PCAP traces to identify adversarial patterns.",
+        "highlights": [
+          "Achieved 94% attack classification accuracy",
+          "Engineered packet-level feature extraction reducing false positives by 40%"
+        ]
+      },
+      {
+        "name": "Real-Time Chat Application",
+        "position": "Developer",
+        "url": null,
+        "startDate": "2024-01",
+        "endDate": "Present",
+        "summary": "Built a scalable multi-user messaging platform with WebSocket-based concurrent connection handling and multi-threaded event processing for low-latency real-time communication across thousands of simultaneous users.",
+        "highlights": [
+          "Built a scalable multi-user messaging platform",
+          "Implemented RESTful authentication with persistent MongoDB storage"
+        ]
+      }
+    ],
+    "volunteer": null,
+    "education": [
+      {
+        "institution": "Indian Institute of Technology (BHU), Varanasi",
+        "url": null,
+        "area": "Computer Science and Engineering",
+        "studyType": "B.Tech",
+        "startDate": "2023-07-01",
+        "endDate": "2027-05-01",
+        "score": null,
+        "courses": null
+      }
+    ],
+    "awards": [
+      {
+        "title": "HackerRank Software Engineer Intern Certification",
+        "date": null,
+        "awarder": "HackerRank",
+        "summary": null
+      },
+      {
+        "title": "Codeforces Max Rating: 1350",
+        "date": null,
+        "awarder": "Codeforces",
+        "summary": null
+      }
+    ],
+    "certificates": null,
+    "publications": null,
+    "skills": null,
+    "languages": null,
+    "interests": null,
+    "references": null,
+    "projects": [
+      {
+        "name": "Enterprise AI Platform",
+        "startDate": null,
+        "endDate": null,
+        "description": "Architected and deployed a production-grade multi-module AI platform on AWS EC2 with an LLM-powered chat assistant, AI image generation, analytics dashboard, and a prompt-to-website builder generating sites in under 10 minutes. Designed modular architecture with concurrent session management, multi-threaded request processing, and a decoupled REST API layer; applied complexity analysis to optimize latency and throughput across simultaneous users.",
+        "highlights": [],
+        "url": null,
+        "technologies": [
+          "Python",
+          "Streamlit",
+          "LangChain",
+          "LLMs",
+          "AWS EC2",
+          "REST APIs"
+        ],
+        "skills": [
+          "Python",
+          "Streamlit",
+          "LangChain",
+          "LLMs",
+          "AWS EC2",
+          "REST APIs"
+        ]
+      },
+      {
+        "name": "VoIP Intrusion Detection System",
+        "startDate": null,
+        "endDate": null,
+        "description": "Built a real-time network security pipeline achieving 94% attack classification accuracy across SPIT, REGISTER flooding, and SIP spoofing; analyzed 10+ GB of PCAP traces to identify adversarial patterns. Engineered packet-level feature extraction reducing false positives by 40%; applied O(n log n) algorithm optimization for efficient detection on high-throughput concurrent network data streams.",
+        "highlights": [],
+        "url": null,
+        "technologies": [
+          "Python",
+          "SIP",
+          "PCAP",
+          "Wireshark",
+          "Scikit-learn"
+        ],
+        "skills": [
+          "Python",
+          "SIP",
+          "PCAP",
+          "Wireshark",
+          "Scikit-learn"
+        ]
+      },
+      {
+        "name": "Real-Time Chat Application",
+        "startDate": null,
+        "endDate": null,
+        "description": "Built a scalable multi-user messaging platform with WebSocket-based concurrent connection handling and multi-threaded event processing for low-latency real-time communication across thousands of simultaneous users. Implemented RESTful authentication with persistent MongoDB storage; architected for horizontal scalability on distributed infrastructure to support enterprise-level concurrent loads.",
+        "highlights": [],
+        "url": null,
+        "technologies": [
+          "Node.js",
+          "Express.js",
+          "WebSockets",
+          "MongoDB"
+        ],
+        "skills": [
+          "Node.js",
+          "Express.js",
+          "WebSockets",
+          "MongoDB"
+        ]
+      }
+    ]
+  },
+  "total_score": 27.0,
+  "max_score": 100,
+  "job_match": {
+    "match_score": 8.7,
+    "matched_keywords": [
+      "across",
+      "backend",
+      "developer",
+      "engineering",
+      "infrastructure",
+      "language",
+      "not",
+      "platform",
+      "processing",
+      "software",
+      "teams",
+      "technical",
+      "technology",
+      "written"
+    ],
+    "missing_keywords": [
+      "about",
+      "accelerate",
+      "accept",
+      "advocate",
+      "ahead.",
+      "ambitious",
+      "america.",
+      "amount",
+      "apply.",
+      "back-end",
+      "become",
+      "bonus",
+      "bringing",
+      "build",
+      "building",
+      "business",
+      "businesses.",
+      "career.",
+      "collaborate",
+      "command",
+      "companies",
+      "concrete",
+      "considered",
+      "contribute",
+      "cross-functional",
+      "deliver",
+      "design",
+      "determine",
+      "different",
+      "directly",
+      "doing",
+      "economy",
+      "empathize",
+      "encouraged",
+      "end-user",
+      "eng",
+      "engage",
+      "english",
+      "ensuring",
+      "enterprises"
+    ],
+    "matched_grouped": {
+      "Other": [
+        "across",
+        "backend",
+        "developer",
+        "engineering",
+        "infrastructure",
+        "language",
+        "not",
+        "platform",
+        "processing",
+        "software",
+        "teams",
+        "technical",
+        "technology",
+        "written"
+      ]
+    },
+    "missing_grouped": {
+      "Concepts": [
+        "systems"
+      ],
+      "Other": [
+        "about",
+        "accelerate",
+        "accept",
+        "advocate",
+        "ahead.",
+        "ambitious",
+        "america.",
+        "amount",
+        "apply.",
+        "back-end",
+        "become",
+        "bonus",
+        "bringing",
+        "build",
+        "building",
+        "business",
+        "businesses.",
+        "career.",
+        "collaborate",
+        "command",
+        "companies",
+        "concrete",
+        "considered",
+        "contribute",
+        "cross-functional",
+        "deliver",
+        "design",
+        "determine",
+        "different",
+        "directly",
+        "doing",
+        "economy",
+        "empathize",
+        "encouraged",
+        "end-user",
+        "eng",
+        "engage",
+        "english",
+        "ensuring",
+        "enterprises",
+        "europe",
+        "everyone",
+        "exceptional",
+        "expand",
+        "experiences",
+        "experts",
+        "extensible",
+        "external",
+        "financial",
+        "focus",
+        "focused",
+        "functions",
+        "gdp",
+        "geographies",
+        "global",
+        "globally.",
+        "group",
+        "grow",
+        "idiosyncrasies",
+        "important",
+        "increase",
+        "integration",
+        "integrations",
+        "interact",
+        "internal",
+        "internet",
+        "kinds",
+        "largest",
+        "latam",
+        "leveraged",
+        "local",
+        "maintain",
+        "manage",
+        "many",
+        "market",
+        "means",
+        "meet",
+        "meets",
+        "merchants",
+        "methods",
+        "millions",
+        "minimum",
+        "mission",
+        "most",
+        "needs",
+        "new",
+        "non-card",
+        "non-tech",
+        "north",
+        "novel",
+        "opportunities.",
+        "opportunity",
+        "options",
+        "organization",
+        "particular",
+        "partner",
+        "partners",
+        "partnerships",
+        "paulo-based",
+        "payment",
+        "payments",
+        "platforms",
+        "portfolio.",
+        "preferred",
+        "previous",
+        "product",
+        "products",
+        "put",
+        "qualifications",
+        "reach",
+        "reason",
+        "regional",
+        "rely",
+        "requirement.",
+        "requirements",
+        "responsibilities",
+        "revenue",
+        "role.",
+        "scale",
+        "services",
+        "simplicity",
+        "sister",
+        "solutions",
+        "someone",
+        "staggering",
+        "startups",
+        "stripe",
+        "their",
+        "these",
+        "they",
+        "translate",
+        "understand",
+        "unprecedented",
+        "use",
+        "used",
+        "user",
+        "users",
+        "verbal",
+        "well",
+        "what",
+        "while",
+        "within",
+        "working",
+        "works",
+        "world",
+        "worldwide."
+      ]
+    },
+    "suggestions": {
+      "Concepts": [
+        "systems"
+      ]
+    }
+  },
+  "job_description": "About Stripe\r\nStripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the internet, and we have a staggering amount of work ahead. That means you have an unprecedented opportunity to put the global economy within everyone's reach while doing the most important work of your career.\r\n\r\nAbout the team\r\nThe Global Payments Experiences group is an organization focused on bringing new and novel payment methods to Stripe, and ensuring Stripe's systems work well for merchants globally. This team works with internal and external partners to expand regional, non-card payment options, and to expand the use of Stripe's payments processing globally.\r\n\r\nWhat you'll do\r\nThis is a São Paulo-based team, with platform teams in the US and Europe and sister teams worldwide. This team in particular will build and maintain new payment methods for Stripe, with a focus on LATAM and North America. They will manage local market idiosyncrasies, become regional experts that other Stripe teams will rely on, and partner with many non-tech functions at Stripe to expand our global reach and product portfolio.\r\n\r\nResponsibilities\r\nDesign and reason about integration experiences with a strong focus on end-user simplicity and developer experience\r\nBuild back-end services and integrations across Stripe's payments product\r\nEngage and interact with external partners to determine and build technical solutions\r\nEngage directly with users to understand their business needs and translate requirements into concrete solutions\r\nCollaborate with cross-functional teams including product, partnerships, eng platforms, and other engineering teams to deliver these solutions\r\nContribute to software platforms used across payments at Stripe\r\nWho you are\r\nWe're looking for someone who meets the minimum requirements to be considered for the role. If you meet these requirements, you are encouraged to apply. The preferred qualifications are a bonus, not a requirement.\r\n\r\nMinimum requirements\r\n3+ years of backend engineering experience\r\nStrong command of verbal and written English language\r\nExperience working across geographies\r\nExperience building extensible, leveraged software solutions that scale to different kinds of user needs, with the ability to empathize with users and advocate for exceptional user experiences\r\nPreferred qualifications\r\nPrevious experience working in payments and on payments technology\r\nPrevious experience using Stripe products",
+  "interview_questions": {
+    "coding_questions": [
+      "Implement a function to detect cycles in a directed graph.",
+      "Given an array of integers, find the maximum sum of a contiguous subarray.",
+      "Design a data structure that supports insertion and deletion operations with O(1) average time complexity."
+    ],
+    "core_subject_questions": [
+      "Explain the concept of virtual memory and how it interacts with physical memory.",
+      "Describe the ACID properties of database transactions. Why are they important?",
+      "What is the difference between TCP and UDP? Provide an example scenario where each would be appropriate.",
+      "Explain polymorphism in OOP, providing a practical example."
+    ],
+    "project_questions": [
+      "Can you elaborate on the architectural choices you made for the Enterprise AI Platform, specifically regarding the modular design and concurrent session management?",
+      "Describe the challenges you faced when optimizing the VoIP Intrusion Detection System's packet-level feature extraction and how you addressed them.",
+      "Walk me through your approach to scaling the Real-Time Chat Application. What specific technologies did you leverage for horizontal scalability?"
+    ],
+    "behavioral_questions": [
+      "Tell me about a time you had to collaborate with a distributed team using Git workflows. What were some of the challenges and how did you overcome them?",
+      "Describe a situation where you identified a performance bottleneck in your code. What steps did you take to resolve it?",
+      "Share an example of a time when you received constructive criticism on your work. How did you respond, and what did you learn from the experience?"
+    ]
+  }
+}

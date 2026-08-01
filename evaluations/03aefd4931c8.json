@@ -1,0 +1,604 @@
+{
+  "id": "03aefd4931c8",
+  "owner": "3c1e8dbee9cd",
+  "candidate_name": "KATRAVATH SRINU",
+  "file_name": "KATRAVATH_SRINU_23075035.pdf",
+  "created_at": "2026-08-01T13:42:02.825494+00:00",
+  "evaluation": {
+    "scores": {
+      "open_source": {
+        "score": 0.0,
+        "max": 100,
+        "evidence": "No public repositories with stars."
+      },
+      "self_projects": {
+        "score": 95.0,
+        "max": 100,
+        "evidence": "Multiple projects listed with descriptions and technologies.  The Shoppie E-Commerce Website project specifically mentions enhancing navigation and usability."
+      },
+      "production": {
+        "score": 80.0,
+        "max": 100,
+        "evidence": "Projects like Railway Reservation System, Netflix Clone, AI-Powered Resume Screening & Ranking System, and Shoppie E-Commerce Website demonstrate practical application of skills."
+      },
+      "technical_skills": {
+        "score": 95.0,
+        "max": 100,
+        "evidence": "Skills listed cover a broad range including programming languages (C++, Python, C, SQL), web development (HTML, CSS, JavaScript, Bootstrap), machine learning (NLP, ML), and tools/frameworks (Git, Django, Numpy, Pandas, VS Code)."
+      }
+    },
+    "bonus_points": {
+      "total": 10.0,
+      "breakdown": "Excellent project descriptions with quantifiable results (e.g., 80% reduction in screening time, 30% response efficiency improvement)."
+    },
+    "deductions": {
+      "total": 5.0,
+      "reasons": "GitHub profile has no stars or followers.  Limited GitHub activity."
+    },
+    "key_strengths": [
+      "Strong foundation in computer science fundamentals.",
+      "Proficiency in multiple programming languages and web development technologies.",
+      "Experience with machine learning techniques (NLP, ML).",
+      "Ability to design and implement scalable e-commerce solutions.",
+      "Demonstrated ability to deliver quantifiable results through projects."
+    ],
+    "areas_for_improvement": [
+      "Increase GitHub activity by contributing to open source projects or publishing more code.",
+      "Expand project portfolio with a wider range of technologies and challenges.",
+      "Focus on building a strong online presence (e.g., personal website, blog) to showcase skills and experience."
+    ]
+  },
+  "resume_text": "=== BASIC INFORMATION ===\nName: KATRAVATH SRINU\nEmail: srinuk9570@gmail.com\nPhone: +91-9347130015\nWebsite: Not provided\nLocation: Varanasi, IN\nProfiles:\n  - LinkedIn: katravathsrinu (https://www.linkedin.com/in/katravathsrinu/)\n  - GitHub: srinuk9570 (https://github.com/srinuk9570)\n\n=== WORK EXPERIENCE ===\n1. Developer at AI-Powered Resume Screening & Ranking System – Python, NLP, ML\n   Period: 2027-06 - Present\n   Description: Implemented skills-matching and PDF parsing algorithms to automate resume analysis. Reduced screening time by 80% while maintaining 92% accuracy in candidate ranking.\n   Key Achievements:\n     • Implemented skills-matching and PDF parsing algorithms\n     • Reduced screening time by 80%\n     • Maintained 92% accuracy in candidate ranking\n2. Developer at Railway Reservation System – Django, SQLite, Bootstrap\n   Period: 2027-06 - Present\n   Description: Developed a full-stack booking system with train search, reservations, and admin panel. Designed scalable backend using Django models and improved response efficiency by 30%.\n   Key Achievements:\n     • Developed a full-stack booking system\n     • Designed scalable backend using Django models\n     • Improved response efficiency by 30%\n3. Developer at Netflix Clone – JavaScript, TMDB API, YouTube API\n   Period: 2027-06 - Present\n   Description: Built a responsive movie streaming platform integrating real-time API data for dynamic lists & trailers. Improved loading performance by 25% via optimized API calls.\n   Key Achievements:\n     • Built a responsive movie streaming platform\n     • Integrated real-time API data\n     • Improved loading performance by 25%\n4. Developer at Shoppie E-Commerce Website – HTML, CSS, JavaScript\n   Period: 2027-06 - Present\n   Description: Designed a modular, scalable e-commerce frontend for clothing products. Implemented product search and detail pages, enhancing navigation and usability.\n   Key Achievements:\n     • Designed a modular, scalable e-commerce frontend\n     • Implemented product search and detail pages\n     • Enhanced navigation and usability\n\n=== EDUCATION ===\n1. B.Tech in Computer Science & Engineering\n   Institution: Indian Institute of Technology (BHU), Varanasi\n   Period: 2023-08 - 2027-08\n\n=== SKILLS ===\n• Programming Languages\n  Keywords: C++, Python, C, SQL\n• Web Development\n  Keywords: HTML, CSS, JavaScript, Bootstrap\n• Computer Science Fundamentals\n  Keywords: Data Structures & Algorithms, OOP, OS, Probability & Statistics\n• Tools & Frameworks\n  Keywords: Git, Django, Numpy, Pandas, VS Code\n• Machine Learning\n  Keywords: NLP, ML\n\n=== PROJECTS ===\n1. AI-Powered Resume Screening & Ranking System – Python, NLP, ML\n   Description: Implemented skills-matching and PDF parsing algorithms to automate resume analysis. Reduced screening time by 80% while maintaining 92% accuracy in candidate ranking.\n2. Railway Reservation System – Django, SQLite, Bootstrap\n   Description: Developed a full-stack booking system with train search, reservations, and admin panel. Designed scalable backend using Django models and improved response efficiency by 30%.\n3. Netflix Clone – JavaScript, TMDB API, YouTube API\n   Description: Built a responsive movie streaming platform integrating real-time API data for dynamic lists & trailers. Improved loading performance by 25% via optimized API calls.\n4. Shoppie E-Commerce Website – HTML, CSS, JavaScript\n   Description: Designed a modular, scalable e-commerce frontend for clothing products. Implemented product search and detail pages, enhancing navigation and usability.\n\n=== AWARDS ===\n• Max LeetCode Rating - LeetCode (None)\n• JEE Advanced 2023 - CBSE (None)\n• IIT (BHU) CSE - Indian Institute of Technology (BHU), Varanasi (None)\n\n=== GITHUB DATA ===\nGitHub Profile:\n- Username: srinuk9570\n- Name: Katravath srinu\n- Bio: None\n- Public Repositories: 11\n- Followers: 0\n- Following: 0\n- Account Created: 2024-09-19T16:34:16Z\n- Last Updated: 2026-03-10T13:20:35Z\n\nGitHub Projects (7 total):\n1. railway-reservation-system\n   Description: My Railway Reservation System project in Django\n   URL: https://github.com/srinuk9570/railway-reservation-system\n   Stars: 0\n   Forks: 0\n   Language: Python\n\n2. btc-technical-dashboard\n   Description: Real-time BTC/USDT technical analysis dashboard using Binance API\n   URL: https://github.com/srinuk9570/btc-technical-dashboard\n   Stars: 0\n   Forks: 0\n   Language: HTML\n\n3. ATS-Backend\n   Description: None\n   URL: https://github.com/srinuk9570/ATS-Backend\n   Stars: 0\n   Forks: 0\n   Language: JavaScript\n\n4. ATS-Frontend\n   Description: ATS Intelligence – Resume & Job Description Matching Platform with AI-powered analysis.\n   URL: https://github.com/srinuk9570/ATS-Frontend\n   Stars: 0\n   Forks: 0\n   Language: JavaScript\n\n5. AI-Resume-Screening\n   Description: AI-powered Resume Screening System using NLP and machine learning to match candidate resumes with job descriptions based on semantic similarity scoring.\n   URL: https://github.com/srinuk9570/AI-Resume-Screening\n   Stars: 0\n   Forks: 0\n   Language: TypeScript\n\n6. linux-http-server-cpp\n   Description: A high-performance multithreaded HTTP server written in C++ on Linux using sockets and pthreads, featuring a custom thread pool, efficient request handling, and performance optimization.\n   URL: https://github.com/srinuk9570/linux-http-server-cpp\n   Stars: 0\n   Forks: 0\n   Language: C++\n\n7. Ecommerce-Website\n   Description: Ecommerce-Website\n   URL: https://github.com/srinuk9570/Ecommerce-Website\n   Stars: 0\n   Forks: 0\n   Language: TypeScript\n\n",
+  "resume_json": {
+    "basics": {
+      "name": "KATRAVATH SRINU",
+      "email": "srinuk9570@gmail.com",
+      "phone": "+91-9347130015",
+      "url": null,
+      "summary": null,
+      "location": {
+        "address": null,
+        "postalCode": null,
+        "city": "Varanasi",
+        "countryCode": "IN",
+        "region": null
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "katravathsrinu",
+          "url": "https://www.linkedin.com/in/katravathsrinu/"
+        },
+        {
+          "network": "GitHub",
+          "username": "srinuk9570",
+          "url": "https://github.com/srinuk9570"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "AI-Powered Resume Screening & Ranking System – Python, NLP, ML",
+        "position": "Developer",
+        "url": null,
+        "startDate": "2027-06",
+        "endDate": "Present",
+        "summary": "Implemented skills-matching and PDF parsing algorithms to automate resume analysis. Reduced screening time by 80% while maintaining 92% accuracy in candidate ranking.",
+        "highlights": [
+          "Implemented skills-matching and PDF parsing algorithms",
+          "Reduced screening time by 80%",
+          "Maintained 92% accuracy in candidate ranking"
+        ]
+      },
+      {
+        "name": "Railway Reservation System – Django, SQLite, Bootstrap",
+        "position": "Developer",
+        "url": null,
+        "startDate": "2027-06",
+        "endDate": "Present",
+        "summary": "Developed a full-stack booking system with train search, reservations, and admin panel. Designed scalable backend using Django models and improved response efficiency by 30%.",
+        "highlights": [
+          "Developed a full-stack booking system",
+          "Designed scalable backend using Django models",
+          "Improved response efficiency by 30%"
+        ]
+      },
+      {
+        "name": "Netflix Clone – JavaScript, TMDB API, YouTube API",
+        "position": "Developer",
+        "url": null,
+        "startDate": "2027-06",
+        "endDate": "Present",
+        "summary": "Built a responsive movie streaming platform integrating real-time API data for dynamic lists & trailers. Improved loading performance by 25% via optimized API calls.",
+        "highlights": [
+          "Built a responsive movie streaming platform",
+          "Integrated real-time API data",
+          "Improved loading performance by 25%"
+        ]
+      },
+      {
+        "name": "Shoppie E-Commerce Website – HTML, CSS, JavaScript",
+        "position": "Developer",
+        "url": null,
+        "startDate": "2027-06",
+        "endDate": "Present",
+        "summary": "Designed a modular, scalable e-commerce frontend for clothing products. Implemented product search and detail pages, enhancing navigation and usability.",
+        "highlights": [
+          "Designed a modular, scalable e-commerce frontend",
+          "Implemented product search and detail pages",
+          "Enhanced navigation and usability"
+        ]
+      }
+    ],
+    "volunteer": null,
+    "education": [
+      {
+        "institution": "Indian Institute of Technology (BHU), Varanasi",
+        "url": null,
+        "area": "Computer Science & Engineering",
+        "studyType": "B.Tech",
+        "startDate": "2023-08",
+        "endDate": "2027-08",
+        "score": null,
+        "courses": null
+      }
+    ],
+    "awards": [
+      {
+        "title": "Max LeetCode Rating",
+        "date": null,
+        "awarder": "LeetCode",
+        "summary": null
+      },
+      {
+        "title": "JEE Advanced 2023",
+        "date": null,
+        "awarder": "CBSE",
+        "summary": null
+      },
+      {
+        "title": "IIT (BHU) CSE",
+        "date": null,
+        "awarder": "Indian Institute of Technology (BHU), Varanasi",
+        "summary": null
+      }
+    ],
+    "certificates": null,
+    "publications": null,
+    "skills": [
+      {
+        "name": "Programming Languages",
+        "level": null,
+        "keywords": [
+          "C++",
+          "Python",
+          "C",
+          "SQL"
+        ]
+      },
+      {
+        "name": "Web Development",
+        "level": null,
+        "keywords": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Bootstrap"
+        ]
+      },
+      {
+        "name": "Computer Science Fundamentals",
+        "level": null,
+        "keywords": [
+          "Data Structures & Algorithms",
+          "OOP",
+          "OS",
+          "Probability & Statistics"
+        ]
+      },
+      {
+        "name": "Tools & Frameworks",
+        "level": null,
+        "keywords": [
+          "Git",
+          "Django",
+          "Numpy",
+          "Pandas",
+          "VS Code"
+        ]
+      },
+      {
+        "name": "Machine Learning",
+        "level": null,
+        "keywords": [
+          "NLP",
+          "ML"
+        ]
+      }
+    ],
+    "languages": null,
+    "interests": null,
+    "references": null,
+    "projects": [
+      {
+        "name": "AI-Powered Resume Screening & Ranking System – Python, NLP, ML",
+        "startDate": null,
+        "endDate": null,
+        "description": "Implemented skills-matching and PDF parsing algorithms to automate resume analysis. Reduced screening time by 80% while maintaining 92% accuracy in candidate ranking.",
+        "highlights": [],
+        "url": null,
+        "technologies": [
+          "Python",
+          "NLP",
+          "ML"
+        ],
+        "skills": [
+          "Python",
+          "NLP",
+          "ML"
+        ]
+      },
+      {
+        "name": "Railway Reservation System – Django, SQLite, Bootstrap",
+        "startDate": null,
+        "endDate": null,
+        "description": "Developed a full-stack booking system with train search, reservations, and admin panel. Designed scalable backend using Django models and improved response efficiency by 30%.",
+        "highlights": [],
+        "url": null,
+        "technologies": [
+          "Django",
+          "SQLite",
+          "Bootstrap"
+        ],
+        "skills": [
+          "Django",
+          "SQLite",
+          "Bootstrap"
+        ]
+      },
+      {
+        "name": "Netflix Clone – JavaScript, TMDB API, YouTube API",
+        "startDate": null,
+        "endDate": null,
+        "description": "Built a responsive movie streaming platform integrating real-time API data for dynamic lists & trailers. Improved loading performance by 25% via optimized API calls.",
+        "highlights": [],
+        "url": null,
+        "technologies": [
+          "JavaScript",
+          "TMDB API",
+          "YouTube API"
+        ],
+        "skills": [
+          "JavaScript",
+          "TMDB API",
+          "YouTube API"
+        ]
+      },
+      {
+        "name": "Shoppie E-Commerce Website – HTML, CSS, JavaScript",
+        "startDate": null,
+        "endDate": null,
+        "description": "Designed a modular, scalable e-commerce frontend for clothing products. Implemented product search and detail pages, enhancing navigation and usability.",
+        "highlights": [],
+        "url": null,
+        "technologies": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
+        "skills": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ]
+      }
+    ]
+  },
+  "total_score": 275.0,
+  "max_score": 400,
+  "job_match": {
+    "match_score": 11.3,
+    "matched_keywords": [
+      "advanced",
+      "algorithms",
+      "based",
+      "c++",
+      "computer",
+      "data",
+      "development",
+      "dynamic",
+      "handling",
+      "high-performance",
+      "integrating",
+      "linux",
+      "product",
+      "projects",
+      "python",
+      "science",
+      "skills",
+      "technology",
+      "time",
+      "while",
+      "written"
+    ],
+    "missing_keywords": [
+      "about",
+      "academic",
+      "achieve",
+      "across",
+      "agile",
+      "allow",
+      "alongside",
+      "amounts",
+      "apache",
+      "apply",
+      "around",
+      "asia",
+      "automated",
+      "back.",
+      "backbone.",
+      "background",
+      "balancing",
+      "been",
+      "benefits.",
+      "between",
+      "build",
+      "business",
+      "challenged",
+      "challenges",
+      "challenging",
+      "collaborate",
+      "collaborative",
+      "commitment",
+      "communication",
+      "complex",
+      "connectivity",
+      "consider",
+      "constantly",
+      "continuously",
+      "core",
+      "culture",
+      "currently",
+      "cutting-edge",
+      "daily",
+      "dare"
+    ],
+    "matched_grouped": {
+      "Languages": [
+        "c++",
+        "python"
+      ],
+      "Tools & Platforms": [
+        "linux"
+      ],
+      "Concepts": [
+        "algorithms"
+      ],
+      "Other": [
+        "advanced",
+        "based",
+        "computer",
+        "data",
+        "development",
+        "dynamic",
+        "handling",
+        "high-performance",
+        "integrating",
+        "product",
+        "projects",
+        "science",
+        "skills",
+        "technology",
+        "time",
+        "while",
+        "written"
+      ]
+    },
+    "missing_grouped": {
+      "Tools & Platforms": [
+        "docker",
+        "kafka",
+        "kubernetes"
+      ],
+      "Concepts": [
+        "agile",
+        "systems",
+        "testing"
+      ],
+      "Other": [
+        "about",
+        "academic",
+        "achieve",
+        "across",
+        "allow",
+        "alongside",
+        "amounts",
+        "apache",
+        "apply",
+        "around",
+        "asia",
+        "automated",
+        "back.",
+        "backbone.",
+        "background",
+        "balancing",
+        "been",
+        "benefits.",
+        "between",
+        "build",
+        "business",
+        "challenged",
+        "challenges",
+        "challenging",
+        "collaborate",
+        "collaborative",
+        "commitment",
+        "communication",
+        "complex",
+        "connectivity",
+        "consider",
+        "constantly",
+        "continuously",
+        "core",
+        "culture",
+        "currently",
+        "cutting-edge",
+        "daily",
+        "dare",
+        "day",
+        "deliver",
+        "depend.",
+        "deployments",
+        "developing",
+        "directly",
+        "disruptive",
+        "diversifying",
+        "each",
+        "embracing",
+        "end-to-end",
+        "engineer",
+        "engineers",
+        "english",
+        "enjoy",
+        "ensuring",
+        "entering",
+        "environment",
+        "essential",
+        "europe",
+        "every",
+        "excellent",
+        "execution",
+        "experienced",
+        "financial",
+        "firm",
+        "fluency",
+        "force",
+        "fpgas.",
+        "fresh",
+        "gathering",
+        "giving",
+        "global",
+        "hadoop",
+        "hardware",
+        "imc",
+        "impala",
+        "implementing",
+        "incremental",
+        "india",
+        "innovate",
+        "innovative",
+        "just",
+        "landscape",
+        "latency",
+        "latency-critical",
+        "liquidity",
+        "loop",
+        "maintainability.",
+        "market",
+        "markets",
+        "massive",
+        "multidisciplinary",
+        "mumbai",
+        "natural",
+        "new",
+        "now",
+        "offices",
+        "operations",
+        "organization.",
+        "ownership",
+        "pacific",
+        "part",
+        "participants",
+        "players",
+        "powered",
+        "problem-solvers",
+        "production",
+        "production.",
+        "professionals",
+        "providing",
+        "quality",
+        "quant",
+        "quants",
+        "relationships",
+        "reliable",
+        "requirements",
+        "research",
+        "researchers",
+        "responsibilities",
+        "scalability",
+        "simplicity",
+        "since",
+        "sits",
+        "software",
+        "solutions.",
+        "some",
+        "spark",
+        "stabilizing",
+        "stack",
+        "strategies",
+        "succeed",
+        "succeed.",
+        "swes",
+        "tackling",
+        "taking",
+        "talented",
+        "teams",
+        "tech/b.e",
+        "technologies",
+        "testability.",
+        "them",
+        "these",
+        "those",
+        "throughput",
+        "touches",
+        "trade-offs",
+        "traders",
+        "trading",
+        "uniquely",
+        "united",
+        "upon",
+        "varying",
+        "verbal",
+        "well",
+        "which",
+        "within",
+        "working",
+        "world-class",
+        "write"
+      ]
+    },
+    "suggestions": {
+      "Tools & Platforms": [
+        "docker",
+        "kafka",
+        "kubernetes"
+      ],
+      "Concepts": [
+        "agile",
+        "systems",
+        "testing"
+      ]
+    }
+  },
+  "job_description": "C++ Software Engineer\r\nExperienced\r\nTechnology\r\nMumbai\r\n\r\n\r\nApply Now\r\nIMC’s Mumbai based C++ Execution development teams work on software that sits directly in the latency-critical loop of our technology stack and touches every part of our organization. From ensuring our connectivity to the market and handling massive amounts of data, to implementing complex trading algorithms and integrating advanced hardware solutions.\r\n\r\nYour Core Responsibilities: \r\n\r\nAs a software engineer, you’ll work in multidisciplinary teams alongside other engineers as well as traders, researchers, and quants to deliver challenging projects, while taking ownership for end-to-end product development – from requirements gathering to production. You’ll write reliable, high-performance software while balancing time to production with quality and testability. Advanced automated testing and daily deployments will allow you to achieve agile and incremental benefits.\r\n\r\nWithin a complex landscape of varying systems and technologies, you’ll be constantly challenged to consider trade-offs between latency, throughput, simplicity, scalability and maintainability.\r\n\r\nThese are just some of the technologies our C++ software engineers are currently working with: C++ 20, Linux, Docker, Kubernetes, Apache Kafka, Apache Spark, Impala, Hadoop, Python and FPGAs.\r\n\r\nYour Skills and Experience: \r\n\r\nStrong academic background in Computer Science (B. Tech/B.E), with 4-8 years of work experience in C++\r\nNatural problem-solvers, who enjoy tackling fresh challenges each day\r\n\r\nTeam players: to succeed, SWEs must be able to build strong relationships with those around them\r\nExcellent written and verbal communication skills; fluency in English\r\n\r\nAbout Us\r\n\r\nIMC is a global trading firm powered by a cutting-edge research environment and a world-class technology backbone. Since 1989, we’ve been a stabilizing force in financial markets, providing essential liquidity upon which market participants depend. Across our offices in the US, Europe, Asia Pacific, and India, our talented quant researchers, engineers, traders, and business operations professionals are united by our uniquely collaborative, high-performance culture, and our commitment to giving back. From entering dynamic new markets to embracing disruptive technologies, and from developing an innovative research environment to diversifying our trading strategies, we dare to continuously innovate and collaborate to succeed.",
+  "interview_questions": {
+    "coding_questions": [
+      "Given an array of integers, write a function to find the two numbers that add up to a specific target. (Focus on efficiency and algorithm choice)",
+      "Implement a function to reverse a string in place.",
+      "Write a function to check if a given string is a palindrome."
+    ],
+    "core_subject_questions": [
+      "Explain the concept of Big O notation and provide examples of algorithms with different complexities (e.g., O(n), O(log n), O(n^2)).",
+      "Describe the differences between SQL and NoSQL databases. When would you choose one over the other?",
+      "What are the key principles of Object-Oriented Programming (OOP)? Explain concepts like inheritance, polymorphism, and encapsulation with examples."
+    ],
+    "project_questions": [
+      "Walk me through the design choices you made for the AI-Powered Resume Screening & Ranking System. What were the biggest challenges you faced and how did you overcome them?",
+      "Describe your role in developing the Railway Reservation System. How did you approach scalability, and what specific techniques did you use to improve response efficiency?"
+    ],
+    "behavioral_questions": [
+      "Tell me about a time you had to work with conflicting requirements or priorities on a project. How did you handle it?",
+      "Describe a situation where you made a mistake in your code or approach. What did you learn from it, and how would you prevent similar mistakes in the future?"
+    ]
+  }
+}

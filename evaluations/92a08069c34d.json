@@ -1,0 +1,510 @@
+{
+  "id": "92a08069c34d",
+  "candidate_name": "Katravath Srinu",
+  "file_name": "Software_Engineer.pdf",
+  "created_at": "2026-07-25T16:28:40.306639+00:00",
+  "evaluation": {
+    "scores": {
+      "open_source": {
+        "score": 0.0,
+        "max": 35,
+        "evidence": "string"
+      },
+      "self_projects": {
+        "score": 0.0,
+        "max": 30,
+        "evidence": "string"
+      },
+      "production": {
+        "score": 0.0,
+        "max": 25,
+        "evidence": "string"
+      },
+      "technical_skills": {
+        "score": 0.0,
+        "max": 10,
+        "evidence": "string"
+      }
+    },
+    "bonus_points": {
+      "total": 0.0,
+      "breakdown": "string"
+    },
+    "deductions": {
+      "total": 0.0,
+      "reasons": "string"
+    },
+    "key_strengths": [
+      "Strong programming skills",
+      "Experience with AI/ML"
+    ],
+    "areas_for_improvement": [
+      "Limited open source contributions"
+    ]
+  },
+  "resume_text": "=== BASIC INFORMATION ===\nName: Katravath Srinu\nEmail: srinuk9570@gmail.com\nPhone: Not provided\nWebsite: Not provided\nSummary: Experienced backend engineer with a strong focus on AI and machine learning applications.\nLocation: Mumbai, IN\nProfiles:\n  - GitHub: katravathsrinu ([github.com/srinuk9570](https://github.com/srinuk9570))\n\n=== WORK EXPERIENCE ===\n1. Backend Open Source Contributor at Company name\n   Period: 2025-01 - 2026-12\n   Description: Contributed 150+ pull requests across the full software development life cycle, optimizing API response handling logic.\n   Key Achievements:\n     • Algorithm design and implementation\n     • Performance optimization\n2. Projects at Company name\n   Period: 2025-01-01 - 2026-12-31\n   Description: Developed an end-to-end generative AI pipeline to extract and summarize insights from financial reports using RAG with Pinecone vector database.\n   Key Achievements:\n     • RAG Pipeline\n     • Pinecone Vector DB\n     • Financial Report Analysis\n3. Projects at Company name\n   Period: 2025-01-01 - 2026-12-31\n   Description: Deployed serverless inference pipeline on AWS Lambda + API Gateway for scalable, production-ready AI querying.\n   Key Achievements:\n     • AWS Lambda\n     • API Gateway\n     • Scalable AI Querying\n4. Projects at Company name\n   Period: 2025-01-01 - 2026-12-31\n   Description: Implemented authentication workflow and persistent message storage backend, applying robust full-cycle software development practices.\n   Key Achievements:\n     • Authentication Workflow\n     • Persistent Message Storage\n5. Projects at Company name\n   Period: 2025-01-01 - 2026-12-31\n   Description: Built an intrusion detection pipeline achieving 94% attack classification accuracy by analyzing 10+ GB of PCAP traffic traces.\n   Key Achievements:\n     • Attack Classification Accuracy\n     • PCAP Traffic Analysis\n6. Projects at Company name\n   Period: 2025-01-01 - 2026-12-31\n   Description: Engineered packet-level feature extraction reducing false positives by 40% – demonstrating large-scale data analytics and algorithm optimization skills.\n   Key Achievements:\n     • Packet Level Feature Extraction\n7. Projects at Company name\n   Period: 2025-01-01 - 2026-12-31\n   Description: Built a scalable multi-user messaging platform with WebSocket-based low-latency architecture supporting concurrent client communication.\n   Key Achievements:\n     • WebSocket Architecture\n     • Multi-User Messaging\n8. Projects at Company name\n   Period: 2025-01-01 - 2026-12-31\n   Description: Implemented authentication workflow and persistent message storage backend, applying robust full-cycle software development practices.\n   Key Achievements:\n     • Authentication Workflow\n     • Persistent Message Storage\n9. Projects at Company name\n   Period: 2025-01-01 - 2026-12-31\n   Description: Certified proficiency in Data Structures, Algorithms, SQL, and Python – BCG X’s primary required programming language.\n   Key Achievements:\n     • Data Structures & Algorithms\n     • SQL\n\n=== EDUCATION ===\n1. Expected 2027 in Computer Science and Engineering\n   Institution: Indian Institute of Technology (BHU), Varanasi\n   Period: 2027-01-01 - 2027-06-30\n2. Expected 2027 in Computer Science and Engineering\n   Institution: Indian Institute of Technology (BHU), Varanasi\n   Period: 2027-01-01 - 2027-06-30\n\n=== SKILLS ===\n• Programming Languages\n  Level: Primary\n  Keywords: Python, C++, JavaScript, SQL\n• AI / ML\n  Keywords: LLMs, LangChain, RAG, NLP, Scikit-learn, Prompt Engineering, Generative AI\n\n=== PROJECTS ===\n1. Financial Document QA System (RAG Pipeline)\n   Description: Built an end-to-end generative AI pipeline to extract and summarize insights from financial reports using RAG with Pinecone vector database, enabling accurate large-scale document querying.\n2. VoIP Attack Detection System\n   Description: Developed an intrusion detection pipeline achieving 94% attack classification accuracy by analyzing 10+ GB of PCAP traffic traces across multiple scenarios.\n3. Real-Time Chat Application\n   Description: Built a scalable multi-user messaging platform with WebSocket-based low-latency architecture supporting concurrent client communication.\n\n=== AWARDS ===\n• BCG X Data Science Internship Award - BCG X (None)\n• LeetCode Top 1200 Solution - LeetCode (None)",
+  "resume_json": {
+    "basics": {
+      "name": "Katravath Srinu",
+      "email": "srinuk9570@gmail.com",
+      "phone": null,
+      "url": null,
+      "summary": "Experienced backend engineer with a strong focus on AI and machine learning applications.",
+      "location": {
+        "address": null,
+        "postalCode": null,
+        "city": "Mumbai",
+        "countryCode": "IN",
+        "region": null
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "katravathsrinu",
+          "url": "[github.com/srinuk9570](https://github.com/srinuk9570)"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Company name",
+        "position": "Backend Open Source Contributor",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "2026-12",
+        "summary": "Contributed 150+ pull requests across the full software development life cycle, optimizing API response handling logic.",
+        "highlights": [
+          "Algorithm design and implementation",
+          "Performance optimization"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01-01",
+        "endDate": "2026-12-31",
+        "summary": "Developed an end-to-end generative AI pipeline to extract and summarize insights from financial reports using RAG with Pinecone vector database.",
+        "highlights": [
+          "RAG Pipeline",
+          "Pinecone Vector DB",
+          "Financial Report Analysis"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01-01",
+        "endDate": "2026-12-31",
+        "summary": "Deployed serverless inference pipeline on AWS Lambda + API Gateway for scalable, production-ready AI querying.",
+        "highlights": [
+          "AWS Lambda",
+          "API Gateway",
+          "Scalable AI Querying"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01-01",
+        "endDate": "2026-12-31",
+        "summary": "Implemented authentication workflow and persistent message storage backend, applying robust full-cycle software development practices.",
+        "highlights": [
+          "Authentication Workflow",
+          "Persistent Message Storage"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01-01",
+        "endDate": "2026-12-31",
+        "summary": "Built an intrusion detection pipeline achieving 94% attack classification accuracy by analyzing 10+ GB of PCAP traffic traces.",
+        "highlights": [
+          "Attack Classification Accuracy",
+          "PCAP Traffic Analysis"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01-01",
+        "endDate": "2026-12-31",
+        "summary": "Engineered packet-level feature extraction reducing false positives by 40% – demonstrating large-scale data analytics and algorithm optimization skills.",
+        "highlights": [
+          "Packet Level Feature Extraction"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01-01",
+        "endDate": "2026-12-31",
+        "summary": "Built a scalable multi-user messaging platform with WebSocket-based low-latency architecture supporting concurrent client communication.",
+        "highlights": [
+          "WebSocket Architecture",
+          "Multi-User Messaging"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01-01",
+        "endDate": "2026-12-31",
+        "summary": "Implemented authentication workflow and persistent message storage backend, applying robust full-cycle software development practices.",
+        "highlights": [
+          "Authentication Workflow",
+          "Persistent Message Storage"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01-01",
+        "endDate": "2026-12-31",
+        "summary": "Certified proficiency in Data Structures, Algorithms, SQL, and Python – BCG X’s primary required programming language.",
+        "highlights": [
+          "Data Structures & Algorithms",
+          "SQL"
+        ]
+      }
+    ],
+    "volunteer": null,
+    "education": [
+      {
+        "institution": "Indian Institute of Technology (BHU), Varanasi",
+        "url": null,
+        "area": "Computer Science and Engineering",
+        "studyType": "Expected 2027",
+        "startDate": "2027-01-01",
+        "endDate": "2027-06-30",
+        "score": null,
+        "courses": null
+      },
+      {
+        "institution": "Indian Institute of Technology (BHU), Varanasi",
+        "url": null,
+        "area": "Computer Science and Engineering",
+        "studyType": "Expected 2027",
+        "startDate": "2027-01-01",
+        "endDate": "2027-06-30",
+        "score": null,
+        "courses": null
+      }
+    ],
+    "awards": [
+      {
+        "title": "BCG X Data Science Internship Award",
+        "date": null,
+        "awarder": "BCG X",
+        "summary": null
+      },
+      {
+        "title": "LeetCode Top 1200 Solution",
+        "date": null,
+        "awarder": "LeetCode",
+        "summary": null
+      }
+    ],
+    "certificates": null,
+    "publications": null,
+    "skills": [
+      {
+        "name": "Programming Languages",
+        "level": "Primary",
+        "keywords": [
+          "Python",
+          "C++",
+          "JavaScript",
+          "SQL"
+        ]
+      },
+      {
+        "name": "AI / ML",
+        "level": null,
+        "keywords": [
+          "LLMs",
+          "LangChain",
+          "RAG",
+          "NLP",
+          "Scikit-learn",
+          "Prompt Engineering",
+          "Generative AI"
+        ]
+      }
+    ],
+    "languages": null,
+    "interests": null,
+    "references": null,
+    "projects": [
+      {
+        "name": "Financial Document QA System (RAG Pipeline)",
+        "startDate": null,
+        "endDate": null,
+        "description": "Built an end-to-end generative AI pipeline to extract and summarize insights from financial reports using RAG with Pinecone vector database, enabling accurate large-scale document querying.",
+        "highlights": [],
+        "url": "",
+        "technologies": [
+          "Python",
+          "AWS",
+          "LangChain",
+          "GPT",
+          "Pinecone"
+        ],
+        "skills": [
+          "Python",
+          "AWS",
+          "LangChain",
+          "GPT",
+          "Pinecone"
+        ]
+      },
+      {
+        "name": "VoIP Attack Detection System",
+        "startDate": null,
+        "endDate": null,
+        "description": "Developed an intrusion detection pipeline achieving 94% attack classification accuracy by analyzing 10+ GB of PCAP traffic traces across multiple scenarios.",
+        "highlights": [],
+        "url": "",
+        "technologies": [
+          "Python",
+          "SIP",
+          "PCAP",
+          "Wireshark"
+        ],
+        "skills": [
+          "Python",
+          "SIP",
+          "PCAP",
+          "Wireshark"
+        ]
+      },
+      {
+        "name": "Real-Time Chat Application",
+        "startDate": null,
+        "endDate": null,
+        "description": "Built a scalable multi-user messaging platform with WebSocket-based low-latency architecture supporting concurrent client communication.",
+        "highlights": [],
+        "url": "",
+        "technologies": [
+          "Node.js",
+          "Express.js",
+          "WebSockets",
+          "MongoDB"
+        ],
+        "skills": [
+          "Node.js",
+          "Express.js",
+          "WebSockets",
+          "MongoDB"
+        ]
+      }
+    ]
+  },
+  "total_score": 0,
+  "max_score": 100,
+  "job_match": {
+    "match_score": 7.4,
+    "matched_keywords": [
+      "architecture",
+      "backend",
+      "development",
+      "engineer",
+      "engineering",
+      "optimization",
+      "skills.",
+      "software"
+    ],
+    "missing_keywords": [
+      "apis",
+      "arrangement",
+      "asset",
+      "audits",
+      "available.",
+      "blockchain",
+      "bridges",
+      "build",
+      "ci/cd",
+      "ci/cd.",
+      "collaborate",
+      "communication",
+      "compliance",
+      "contract",
+      "contracts.",
+      "databases",
+      "debugging",
+      "defi",
+      "develop",
+      "devops",
+      "digital",
+      "direct",
+      "distributed",
+      "distributed-system",
+      "docker",
+      "documentation.",
+      "efficiency",
+      "engagement",
+      "evm",
+      "evm-compatible",
+      "experience.",
+      "familiarity",
+      "fintech",
+      "full-time",
+      "fully",
+      "gas",
+      "high-availability",
+      "improve",
+      "independent",
+      "infrastructure"
+    ],
+    "matched_grouped": {
+      "Other": [
+        "architecture",
+        "backend",
+        "development",
+        "engineer",
+        "engineering",
+        "optimization",
+        "skills.",
+        "software"
+      ]
+    },
+    "missing_grouped": {
+      "Languages": [
+        "typescript"
+      ],
+      "Tools & Platforms": [
+        "ci/cd",
+        "docker",
+        "kubernetes"
+      ],
+      "Concepts": [
+        "apis",
+        "devops",
+        "distributed",
+        "rest",
+        "security",
+        "systems",
+        "testing"
+      ],
+      "Other": [
+        "arrangement",
+        "asset",
+        "audits",
+        "available.",
+        "blockchain",
+        "bridges",
+        "build",
+        "ci/cd.",
+        "collaborate",
+        "communication",
+        "compliance",
+        "contract",
+        "contracts.",
+        "databases",
+        "debugging",
+        "defi",
+        "develop",
+        "digital",
+        "direct",
+        "distributed-system",
+        "documentation.",
+        "efficiency",
+        "engagement",
+        "evm",
+        "evm-compatible",
+        "experience.",
+        "familiarity",
+        "fintech",
+        "full-time",
+        "fully",
+        "gas",
+        "high-availability",
+        "improve",
+        "independent",
+        "infrastructure",
+        "integrate",
+        "integrations",
+        "issues.",
+        "knowledge.",
+        "layer",
+        "libraries",
+        "liquidity",
+        "long-term",
+        "maintain",
+        "monitoring",
+        "movement",
+        "networks",
+        "networks.",
+        "nice",
+        "node.js",
+        "open-source",
+        "options",
+        "payments",
+        "performance.",
+        "planning",
+        "processing.",
+        "product",
+        "professional",
+        "projects.",
+        "python.",
+        "reliability",
+        "reliable",
+        "remote",
+        "remote-working",
+        "requirements",
+        "responsibilities",
+        "reviews",
+        "secure",
+        "senior",
+        "services",
+        "services.",
+        "settlement",
+        "settlement.",
+        "smart",
+        "solidity",
+        "stablecoins",
+        "stablenaira",
+        "stablenaira.",
+        "support",
+        "systems.",
+        "teams.",
+        "test",
+        "transaction",
+        "transaction-processing",
+        "troubleshoot",
+        "understanding",
+        "wallet",
+        "wallets",
+        "web3"
+      ]
+    },
+    "suggestions": {
+      "Languages": [
+        "typescript"
+      ],
+      "Tools & Platforms": [
+        "ci/cd",
+        "docker",
+        "kubernetes"
+      ],
+      "Concepts": [
+        "apis",
+        "devops",
+        "distributed",
+        "rest",
+        "security",
+        "systems",
+        "testing"
+      ]
+    }
+  },
+  "job_description": "StableNaira is looking for a Senior Blockchain Engineer to build secure fintech infrastructure for payments, wallet integrations, liquidity movement, and digital asset settlement.\r\n\r\nResponsibilities\r\n\r\nDevelop, test, and maintain Solidity smart contracts.\r\nBuild backend services, APIs, and transaction-processing systems.\r\nIntegrate wallets, blockchain APIs, and EVM-compatible networks.\r\nImprove gas efficiency, transaction reliability, and settlement performance.\r\nSupport architecture planning, security reviews, testing, CI/CD, monitoring, and documentation.\r\nTroubleshoot blockchain, backend, and distributed-system issues.\r\nCollaborate with engineering, product, DevOps, and compliance teams.\r\nRequirements\r\n\r\n4+ years of professional software development experience.\r\nStrong Solidity, smart contract, and EVM knowledge.\r\nBackend experience with Node.js, TypeScript, Go, or Python.\r\nExperience with Web3 libraries, wallets, APIs, databases, and REST services.\r\nUnderstanding of smart contract security, gas optimization, and reliable transaction processing.\r\nFamiliarity with Docker, Kubernetes, distributed systems, or CI/CD.\r\nStrong communication, debugging, and independent remote-working skills.\r\nNice to Have\r\n\r\nExperience with stablecoins, DeFi, fintech, Layer 2 networks, bridges, audits, high-availability systems, or open-source blockchain projects.\r\n\r\nWork Arrangement\r\n\r\nFully remote, direct engagement with StableNaira. Full-time or long-term contract options are available."
+}

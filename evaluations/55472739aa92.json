@@ -1,0 +1,479 @@
+{
+  "id": "55472739aa92",
+  "owner": "3c1e8dbee9cd",
+  "candidate_name": "Hemant Upadhyay",
+  "file_name": "Hemant-Java-Dev.pdf",
+  "created_at": "2026-07-31T06:44:26.526448+00:00",
+  "evaluation": {
+    "scores": {
+      "open_source": {
+        "score": 0.0,
+        "max": 35,
+        "evidence": "Experience with Spring Boot and React projects at RKGIT. Developed full-stack applications using these technologies."
+      },
+      "self_projects": {
+        "score": 20.0,
+        "max": 30,
+        "evidence": "Developed Google Drive and Real-time Chatting App projects utilizing Spring Boot, React, and AI models."
+      },
+      "production": {
+        "score": 15.0,
+        "max": 25,
+        "evidence": "Implemented full-stack apps using Java, Spring Boot, and React in academic role. Developed REST APIs for Google Drive project."
+      },
+      "technical_skills": {
+        "score": 8.0,
+        "max": 10,
+        "evidence": "Proficient in Java, JavaScript, HTML, CSS, Spring Boot, React, MySQL, Git, JIRA, Postman, Gemini and Cloud technologies."
+      }
+    },
+    "bonus_points": {
+      "total": 0.0,
+      "breakdown": "N/A"
+    },
+    "deductions": {
+      "total": 0.0,
+      "reasons": "N/A"
+    },
+    "key_strengths": [
+      "Java Development",
+      "Full-Stack Application Development",
+      "Spring Boot Expertise",
+      "React Experience",
+      "AI Integration"
+    ],
+    "areas_for_improvement": [
+      "Lack of professional work experience beyond academic projects",
+      "Limited details on specific contributions to open source projects"
+    ]
+  },
+  "resume_text": "=== BASIC INFORMATION ===\nName: Hemant Upadhyay\nEmail: hemant.upadhyay@gmail.com\nPhone: 8897452541\nWebsite: Not provided\nSummary: Highly motivated Java Developer skilled in building scalable full-stack applications using Spring Boot and React. Experienced in developing REST APIs, working in Agile teams, and integrating AI solutions using Spring AI. Quick learner with strong problem-solving and debugging skills.\nLocation: Delhi, IN\nProfiles:\n  - LinkedIn: ashwani-kumar-7b986a14b (https://www.linkedin.com/in/ashwani-kumar-7b986a14b/)\n\n=== WORK EXPERIENCE ===\n1. Project Engineer (Academic Role) at Raj Kumar Goel Institute of Technology (RKGIT)\n   Period: 2023-01 - 2023-06\n   Description: Implemented full-stack apps using Java, Spring Boot, and React. Collaborated in 3+ group projects, taking lead on backend development. Followed Agile process in mini-projects for regular sprint-based deliveries. Participated in code reviews and debugging sessions for peer learning.\n   Key Achievements:\n     • Implemented full-stack apps using Java, Spring Boot, and React\n     • Collaborated in 3+ group projects, taking lead on backend development\n     • Followed Agile process in mini-projects for regular sprint-based deliveries\n     • Participated in code reviews and debugging sessions for peer learning\n\n=== EDUCATION ===\n1. Bachelor of Technology in Computer Science\n   Institution: Raj Kumar Goel Institute of Technology (RKGIT)\n   Period: 2019-09-01 - 2023-09-30\n   Score: 75%\n\n=== SKILLS ===\n• Programming Languages\n  Keywords: Java, JavaScript, HTML, CSS\n• Frameworks/Libraries\n  Keywords: Spring Boot, React, Spring AI, WebSocket, REST APIs\n• Databases\n  Keywords: MySQL\n• Tools & Technologies\n  Keywords: Git, JIRA, Postman, Google Drive, Gemini, Cloud\n• Methodologies\n  Keywords: Agile\n\n=== PROJECTS ===\n1. Google Drive\n   Description: Created a cloud-based file storage system with secure user authentication Enabled file upload, download, delete, and folder creation using REST APIs and React UI. Implemented back-end logic using Spring Boot and MySQL.\n2. Real-time Chatting App\n   Description: Built AI chat app using Spring AI and Gemini model. Enabled real-time messaging with Web Socket. Designed clean UI using React. Added contextual AI replies based on user input.\n\n=== AWARDS ===\n• Best Performer Award (Cricket) - None (None)\n• Ranked in Top 5% of College - None (None)",
+  "resume_json": {
+    "basics": {
+      "name": "Hemant Upadhyay",
+      "email": "hemant.upadhyay@gmail.com",
+      "phone": "8897452541",
+      "url": null,
+      "summary": "Highly motivated Java Developer skilled in building scalable full-stack applications using Spring Boot and React. Experienced in developing REST APIs, working in Agile teams, and integrating AI solutions using Spring AI. Quick learner with strong problem-solving and debugging skills.",
+      "location": {
+        "address": null,
+        "postalCode": null,
+        "city": "Delhi",
+        "countryCode": "IN",
+        "region": null
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "ashwani-kumar-7b986a14b",
+          "url": "https://www.linkedin.com/in/ashwani-kumar-7b986a14b/"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Raj Kumar Goel Institute of Technology (RKGIT)",
+        "position": "Project Engineer (Academic Role)",
+        "url": null,
+        "startDate": "2023-01",
+        "endDate": "2023-06",
+        "summary": "Implemented full-stack apps using Java, Spring Boot, and React. Collaborated in 3+ group projects, taking lead on backend development. Followed Agile process in mini-projects for regular sprint-based deliveries. Participated in code reviews and debugging sessions for peer learning.",
+        "highlights": [
+          "Implemented full-stack apps using Java, Spring Boot, and React",
+          "Collaborated in 3+ group projects, taking lead on backend development",
+          "Followed Agile process in mini-projects for regular sprint-based deliveries",
+          "Participated in code reviews and debugging sessions for peer learning"
+        ]
+      }
+    ],
+    "volunteer": null,
+    "education": [
+      {
+        "institution": "Raj Kumar Goel Institute of Technology (RKGIT)",
+        "url": null,
+        "area": "Computer Science",
+        "studyType": "Bachelor of Technology",
+        "startDate": "2019-09-01",
+        "endDate": "2023-09-30",
+        "score": "75%",
+        "courses": null
+      }
+    ],
+    "awards": [
+      {
+        "title": "Best Performer Award (Cricket)",
+        "date": null,
+        "awarder": null,
+        "summary": null
+      },
+      {
+        "title": "Ranked in Top 5% of College",
+        "date": null,
+        "awarder": null,
+        "summary": null
+      }
+    ],
+    "certificates": null,
+    "publications": null,
+    "skills": [
+      {
+        "name": "Programming Languages",
+        "level": null,
+        "keywords": [
+          "Java",
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "name": "Frameworks/Libraries",
+        "level": null,
+        "keywords": [
+          "Spring Boot",
+          "React",
+          "Spring AI",
+          "WebSocket",
+          "REST APIs"
+        ]
+      },
+      {
+        "name": "Databases",
+        "level": null,
+        "keywords": [
+          "MySQL"
+        ]
+      },
+      {
+        "name": "Tools & Technologies",
+        "level": null,
+        "keywords": [
+          "Git",
+          "JIRA",
+          "Postman",
+          "Google Drive",
+          "Gemini",
+          "Cloud"
+        ]
+      },
+      {
+        "name": "Methodologies",
+        "level": null,
+        "keywords": [
+          "Agile"
+        ]
+      }
+    ],
+    "languages": null,
+    "interests": null,
+    "references": null,
+    "projects": [
+      {
+        "name": "Google Drive",
+        "startDate": null,
+        "endDate": null,
+        "description": "Created a cloud-based file storage system with secure user authentication Enabled file upload, download, delete, and folder creation using REST APIs and React UI. Implemented back-end logic using Spring Boot and MySQL.",
+        "highlights": [],
+        "url": null,
+        "technologies": [
+          "Spring Boot",
+          "React",
+          "MySQL",
+          "REST APIs"
+        ],
+        "skills": [
+          "Spring Boot",
+          "React",
+          "MySQL",
+          "REST APIs"
+        ]
+      },
+      {
+        "name": "Real-time Chatting App",
+        "startDate": null,
+        "endDate": null,
+        "description": "Built AI chat app using Spring AI and Gemini model. Enabled real-time messaging with Web Socket. Designed clean UI using React. Added contextual AI replies based on user input.",
+        "highlights": [],
+        "url": null,
+        "technologies": [
+          "Spring AI",
+          "Gemini",
+          "React",
+          "WebSocket"
+        ],
+        "skills": [
+          "Spring AI",
+          "Gemini",
+          "React",
+          "WebSocket"
+        ]
+      }
+    ]
+  },
+  "total_score": 43.0,
+  "max_score": 100,
+  "job_match": {
+    "match_score": 6.8,
+    "matched_keywords": [
+      "back-end",
+      "backend",
+      "building",
+      "developer",
+      "group",
+      "not",
+      "solutions",
+      "teams",
+      "technology",
+      "user",
+      "working"
+    ],
+    "missing_keywords": [
+      "about",
+      "accelerate",
+      "accept",
+      "across",
+      "advocate",
+      "ahead.",
+      "ambitious",
+      "america.",
+      "amount",
+      "apply.",
+      "become",
+      "bonus",
+      "bringing",
+      "build",
+      "business",
+      "businesses.",
+      "career.",
+      "collaborate",
+      "command",
+      "companies",
+      "concrete",
+      "considered",
+      "contribute",
+      "cross-functional",
+      "deliver",
+      "design",
+      "determine",
+      "different",
+      "directly",
+      "doing",
+      "economy",
+      "empathize",
+      "encouraged",
+      "end-user",
+      "eng",
+      "engage",
+      "engineering",
+      "english",
+      "ensuring",
+      "enterprises"
+    ],
+    "matched_grouped": {
+      "Other": [
+        "back-end",
+        "backend",
+        "building",
+        "developer",
+        "group",
+        "not",
+        "solutions",
+        "teams",
+        "technology",
+        "user",
+        "working"
+      ]
+    },
+    "missing_grouped": {
+      "Concepts": [
+        "systems"
+      ],
+      "Other": [
+        "about",
+        "accelerate",
+        "accept",
+        "across",
+        "advocate",
+        "ahead.",
+        "ambitious",
+        "america.",
+        "amount",
+        "apply.",
+        "become",
+        "bonus",
+        "bringing",
+        "build",
+        "business",
+        "businesses.",
+        "career.",
+        "collaborate",
+        "command",
+        "companies",
+        "concrete",
+        "considered",
+        "contribute",
+        "cross-functional",
+        "deliver",
+        "design",
+        "determine",
+        "different",
+        "directly",
+        "doing",
+        "economy",
+        "empathize",
+        "encouraged",
+        "end-user",
+        "eng",
+        "engage",
+        "engineering",
+        "english",
+        "ensuring",
+        "enterprises",
+        "europe",
+        "everyone",
+        "exceptional",
+        "expand",
+        "experiences",
+        "experts",
+        "extensible",
+        "external",
+        "financial",
+        "focus",
+        "focused",
+        "functions",
+        "gdp",
+        "geographies",
+        "global",
+        "globally.",
+        "grow",
+        "idiosyncrasies",
+        "important",
+        "increase",
+        "infrastructure",
+        "integration",
+        "integrations",
+        "interact",
+        "internal",
+        "internet",
+        "kinds",
+        "language",
+        "largest",
+        "latam",
+        "leveraged",
+        "local",
+        "maintain",
+        "manage",
+        "many",
+        "market",
+        "means",
+        "meet",
+        "meets",
+        "merchants",
+        "methods",
+        "millions",
+        "minimum",
+        "mission",
+        "most",
+        "needs",
+        "new",
+        "non-card",
+        "non-tech",
+        "north",
+        "novel",
+        "opportunities.",
+        "opportunity",
+        "options",
+        "organization",
+        "particular",
+        "partner",
+        "partners",
+        "partnerships",
+        "paulo-based",
+        "payment",
+        "payments",
+        "platform",
+        "platforms",
+        "portfolio.",
+        "preferred",
+        "previous",
+        "processing",
+        "product",
+        "products",
+        "put",
+        "qualifications",
+        "reach",
+        "reason",
+        "regional",
+        "rely",
+        "requirement.",
+        "requirements",
+        "responsibilities",
+        "revenue",
+        "role.",
+        "scale",
+        "services",
+        "simplicity",
+        "sister",
+        "software",
+        "someone",
+        "staggering",
+        "startups",
+        "stripe",
+        "technical",
+        "their",
+        "these",
+        "they",
+        "translate",
+        "understand",
+        "unprecedented",
+        "use",
+        "used",
+        "users",
+        "verbal",
+        "well",
+        "what",
+        "while",
+        "within",
+        "works",
+        "world",
+        "worldwide.",
+        "written"
+      ]
+    },
+    "suggestions": {
+      "Concepts": [
+        "systems"
+      ]
+    }
+  },
+  "job_description": "About Stripe\r\nStripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the internet, and we have a staggering amount of work ahead. That means you have an unprecedented opportunity to put the global economy within everyone's reach while doing the most important work of your career.\r\n\r\nAbout the team\r\nThe Global Payments Experiences group is an organization focused on bringing new and novel payment methods to Stripe, and ensuring Stripe's systems work well for merchants globally. This team works with internal and external partners to expand regional, non-card payment options, and to expand the use of Stripe's payments processing globally.\r\n\r\nWhat you'll do\r\nThis is a São Paulo-based team, with platform teams in the US and Europe and sister teams worldwide. This team in particular will build and maintain new payment methods for Stripe, with a focus on LATAM and North America. They will manage local market idiosyncrasies, become regional experts that other Stripe teams will rely on, and partner with many non-tech functions at Stripe to expand our global reach and product portfolio.\r\n\r\nResponsibilities\r\nDesign and reason about integration experiences with a strong focus on end-user simplicity and developer experience\r\nBuild back-end services and integrations across Stripe's payments product\r\nEngage and interact with external partners to determine and build technical solutions\r\nEngage directly with users to understand their business needs and translate requirements into concrete solutions\r\nCollaborate with cross-functional teams including product, partnerships, eng platforms, and other engineering teams to deliver these solutions\r\nContribute to software platforms used across payments at Stripe\r\nWho you are\r\nWe're looking for someone who meets the minimum requirements to be considered for the role. If you meet these requirements, you are encouraged to apply. The preferred qualifications are a bonus, not a requirement.\r\n\r\nMinimum requirements\r\n3+ years of backend engineering experience\r\nStrong command of verbal and written English language\r\nExperience working across geographies\r\nExperience building extensible, leveraged software solutions that scale to different kinds of user needs, with the ability to empathize with users and advocate for exceptional user experiences\r\nPreferred qualifications\r\nPrevious experience working in payments and on payments technology\r\nPrevious experience using Stripe products",
+  "interview_questions": {
+    "coding_questions": [
+      "Given an array of integers, write a function to find the maximum sum of a contiguous subarray.",
+      "Implement a simple REST API endpoint using Spring Boot that accepts a JSON payload and returns a success or error message based on the input data.",
+      "Design a class representing a WebSocket connection. Include methods for sending and receiving messages.",
+      "Write a function to reverse a string in place, optimizing for space complexity.",
+      "Implement a basic caching mechanism using Redis (assuming familiarity with Redis) to improve API response times."
+    ],
+    "core_subject_questions": [
+      "Explain the difference between process and thread. How does this relate to concurrency?",
+      "Describe the ACID properties of a relational database management system (RDBMS).",
+      "What is TCP/IP? Explain the role of each layer in the model.",
+      "Explain Object-Oriented Programming principles like encapsulation, inheritance, and polymorphism with examples.",
+      "Design a simple system for handling user authentication. Consider security aspects and scalability.",
+      "Describe the concept of system design and what factors are important when designing a scalable application."
+    ],
+    "project_questions": [
+      "Let's talk about your Google Drive project. Can you walk me through the key architectural decisions you made for the backend, specifically regarding data modeling in MySQL?",
+      "In your Real-time Chatting App, how did you integrate Spring AI and Gemini? What were some of the challenges you faced with integrating an external AI model into a real-time application?",
+      "During the development of your Google Drive project, can you describe a specific instance where you had to debug a complex issue in the React UI or the Spring Boot backend? What debugging techniques did you use?",
+      "Regarding the Real-time Chatting App, how did you handle potential issues with WebSockets, such as connection drops or message delivery guarantees?",
+      "Can you elaborate on your experience using Git for version control and collaborating within an Agile team?"
+    ],
+    "behavioral_questions": [
+      "Tell me about a time when you had to learn a new technology quickly. What was your approach, and what were the biggest challenges you faced?",
+      "Describe a situation where you disagreed with a teammate on a technical decision. How did you handle the conflict, and what was the outcome?",
+      "Give an example of a time when you took initiative to improve a process or solve a problem within a team."
+    ]
+  }
+}

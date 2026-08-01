@@ -1,0 +1,12 @@
+﻿<svg width="280" height="64" viewBox="0 0 280 64" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Hiring Agent logo</title>
+<rect x="0" y="0" width="64" height="64" rx="14" fill="#0EA672"/>
+<rect x="19" y="13" width="23" height="30" rx="3" fill="#FFFFFF"/>
+<path d="M37 13 L42 18 L37 18 Z" fill="#0B7A54"/>
+<rect x="23.5" y="21" width="14" height="2.5" rx="1.25" fill="#CDEBDC"/>
+<rect x="23.5" y="27" width="14" height="2.5" rx="1.25" fill="#CDEBDC"/>
+<rect x="23.5" y="33" width="8" height="2.5" rx="1.25" fill="#CDEBDC"/>
+<circle cx="45" cy="45" r="12" fill="#12151B"/>
+<path d="M39.5 45.3 L43.5 49.3 L51 40.7" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80" y="40" font-family="'Space Grotesk', 'Arial', sans-serif" font-size="26" font-weight="700" fill="#12151B" letter-spacing="-0.5">Hiring<tspan fill="#0EA672">&#183;</tspan>Agent</text>
+</svg>

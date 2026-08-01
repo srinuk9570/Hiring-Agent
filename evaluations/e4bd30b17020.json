@@ -1,0 +1,242 @@
+{
+  "id": "e4bd30b17020",
+  "owner": "c80a6ca2d7cb",
+  "candidate_name": "KATRAVATH SRINU",
+  "file_name": "Katravath_Srinu_SDE_Intern_Resume.pdf",
+  "created_at": "2026-07-31T05:15:47.188694+00:00",
+  "evaluation": {
+    "scores": {
+      "open_source": {
+        "score": 0.0,
+        "max": 35,
+        "evidence": "No open-source contributions mentioned in the resume."
+      },
+      "self_projects": {
+        "score": 30.0,
+        "max": 30,
+        "evidence": "Developed three substantial projects: Netflix Recommendation System, AI Resume Screening Tool, and Real-Time Chat Application."
+      },
+      "production": {
+        "score": 25.0,
+        "max": 25,
+        "evidence": "Projects involved building scalable applications with REST APIs, WebSockets, and data preprocessing pipelines."
+      },
+      "technical_skills": {
+        "score": 10.0,
+        "max": 10,
+        "evidence": "Skills include C++, Python, SQL, Data Structures & Algorithms, OOP, DBMS, Operating Systems, Git, GitHub, Linux, VS Code."
+      }
+    },
+    "bonus_points": {
+      "total": 0.0,
+      "breakdown": "Excellent project portfolio demonstrating practical skills and problem-solving abilities."
+    },
+    "deductions": {
+      "total": 0.0,
+      "reasons": ""
+    },
+    "key_strengths": [
+      "Recommendation System Development",
+      "NLP Application Development",
+      "Scalable Application Design",
+      "Data Preprocessing & Model Evaluation",
+      "Proficiency in Multiple Programming Languages"
+    ],
+    "areas_for_improvement": [
+      "Open-Source Contributions",
+      "Detailed Technical Skill Breakdown",
+      "Project Documentation"
+    ]
+  },
+  "resume_text": "=== BASIC INFORMATION ===\nName: KATRAVATH SRINU\nEmail: srinuk9570@gmail.com\nPhone: +91-9347130015\nWebsite: Not provided\nLocation: Varanasi, IN\nProfiles:\n  - LinkedIn: katravathsrinu (https://www.linkedin.com/in/katravathsrinu/)\n\n=== EDUCATION ===\n1. B.Tech in Computer Science and Engineering\n   Institution: Indian Institute of Technology (BHU), Varanasi\n   Period: 2023-07-01 - 2027-07-01\n   Score: 6.75/10\n\n=== SKILLS ===\n• Programming\n  Keywords: C++, Python, C, SQL\n• CS Fundamentals\n  Keywords: Data Structures & Algorithms, OOP, DBMS, Operating Systems\n• Machine Learning\n  Keywords: Collaborative Filtering, Matrix Factorization (SVD), Model Evaluation, NLP Techniques\n• Web / Backend\n  Keywords: REST APIs, Flask, WebSockets\n• Tools\n  Keywords: Git, GitHub, Linux, VS Code\n\n=== PROJECTS ===\n1. Netflix Recommendation System (Netflix Prize–Style)\n   Description: Built a Netflix-style recommendation system leveraging SVD-based collaborative filtering and latent factor models on large scale user–item rating data. Optimized model performance by minimizing RMSE, improving recommendation accuracy over baseline approaches while efficiently handling sparse datasets. Designed end-to-end data preprocessing and evaluation pipelines, including normalization, train–test splitting, and performance analysis.\n2. AI Resume Screening Tool\n   Description: Developed an NLP-based resume screening system to parse PDF resumes and extract key candidate skills automatically. Implemented a similarity-scoring algorithm to rank candidates against job descriptions, enabling automated and objective candidate shortlisting.\n3. Real-Time Chat Application\n   Description: Developed a scalable real-time chat application supporting one-to-one and group messaging using WebSockets. Implemented message delivery acknowledgments and robust online/offline user state handling. Designed backend APIs to manage users, chat rooms, and persistent message storage.\n\n=== AWARDS ===\n• Codeforces Max Rating: 1100 - Codeforces (None)\n• JEE Advanced 2023: AIR 11227 - JEE Advanced (None)\n• B.Tech CSE at IIT (BHU) - IIT (BHU) (None)",
+  "resume_json": {
+    "basics": {
+      "name": "KATRAVATH SRINU",
+      "email": "srinuk9570@gmail.com",
+      "phone": "+91-9347130015",
+      "url": null,
+      "summary": null,
+      "location": {
+        "address": null,
+        "postalCode": null,
+        "city": "Varanasi",
+        "countryCode": "IN",
+        "region": null
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "katravathsrinu",
+          "url": "https://www.linkedin.com/in/katravathsrinu/"
+        }
+      ]
+    },
+    "work": null,
+    "volunteer": null,
+    "education": [
+      {
+        "institution": "Indian Institute of Technology (BHU), Varanasi",
+        "url": null,
+        "area": "Computer Science and Engineering",
+        "studyType": "B.Tech",
+        "startDate": "2023-07-01",
+        "endDate": "2027-07-01",
+        "score": "6.75/10",
+        "courses": null
+      }
+    ],
+    "awards": [
+      {
+        "title": "Codeforces Max Rating: 1100",
+        "date": null,
+        "awarder": "Codeforces",
+        "summary": null
+      },
+      {
+        "title": "JEE Advanced 2023: AIR 11227",
+        "date": null,
+        "awarder": "JEE Advanced",
+        "summary": null
+      },
+      {
+        "title": "B.Tech CSE at IIT (BHU)",
+        "date": null,
+        "awarder": "IIT (BHU)",
+        "summary": null
+      }
+    ],
+    "certificates": null,
+    "publications": null,
+    "skills": [
+      {
+        "name": "Programming",
+        "level": null,
+        "keywords": [
+          "C++",
+          "Python",
+          "C",
+          "SQL"
+        ]
+      },
+      {
+        "name": "CS Fundamentals",
+        "level": null,
+        "keywords": [
+          "Data Structures & Algorithms",
+          "OOP",
+          "DBMS",
+          "Operating Systems"
+        ]
+      },
+      {
+        "name": "Machine Learning",
+        "level": null,
+        "keywords": [
+          "Collaborative Filtering",
+          "Matrix Factorization (SVD)",
+          "Model Evaluation",
+          "NLP Techniques"
+        ]
+      },
+      {
+        "name": "Web / Backend",
+        "level": null,
+        "keywords": [
+          "REST APIs",
+          "Flask",
+          "WebSockets"
+        ]
+      },
+      {
+        "name": "Tools",
+        "level": null,
+        "keywords": [
+          "Git",
+          "GitHub",
+          "Linux",
+          "VS Code"
+        ]
+      }
+    ],
+    "languages": null,
+    "interests": null,
+    "references": null,
+    "projects": [
+      {
+        "name": "Netflix Recommendation System (Netflix Prize–Style)",
+        "startDate": null,
+        "endDate": null,
+        "description": "Built a Netflix-style recommendation system leveraging SVD-based collaborative filtering and latent factor models on large scale user–item rating data. Optimized model performance by minimizing RMSE, improving recommendation accuracy over baseline approaches while efficiently handling sparse datasets. Designed end-to-end data preprocessing and evaluation pipelines, including normalization, train–test splitting, and performance analysis.",
+        "highlights": [],
+        "url": null,
+        "technologies": [
+          "Python",
+          "NumPy",
+          "Pandas",
+          "Scikit-learn"
+        ],
+        "skills": [
+          "Python",
+          "NumPy",
+          "Pandas",
+          "Scikit-learn"
+        ]
+      },
+      {
+        "name": "AI Resume Screening Tool",
+        "startDate": null,
+        "endDate": null,
+        "description": "Developed an NLP-based resume screening system to parse PDF resumes and extract key candidate skills automatically. Implemented a similarity-scoring algorithm to rank candidates against job descriptions, enabling automated and objective candidate shortlisting.",
+        "highlights": [],
+        "url": null,
+        "technologies": [
+          "Python",
+          "NLP"
+        ],
+        "skills": [
+          "Python",
+          "NLP"
+        ]
+      },
+      {
+        "name": "Real-Time Chat Application",
+        "startDate": null,
+        "endDate": null,
+        "description": "Developed a scalable real-time chat application supporting one-to-one and group messaging using WebSockets. Implemented message delivery acknowledgments and robust online/offline user state handling. Designed backend APIs to manage users, chat rooms, and persistent message storage.",
+        "highlights": [],
+        "url": null,
+        "technologies": [
+          "Node.js / Java",
+          "WebSockets",
+          "MongoDB"
+        ],
+        "skills": [
+          "Node.js / Java",
+          "WebSockets",
+          "MongoDB"
+        ]
+      }
+    ]
+  },
+  "total_score": 65.0,
+  "max_score": 100,
+  "job_match": {
+    "match_score": 0.0,
+    "matched_keywords": [],
+    "missing_keywords": [
+      "nothing"
+    ],
+    "matched_grouped": {},
+    "missing_grouped": {
+      "Other": [
+        "nothing"
+      ]
+    },
+    "suggestions": {
+      "Other": [
+        "nothing"
+      ]
+    }
+  },
+  "job_description": "Nothing"
+}

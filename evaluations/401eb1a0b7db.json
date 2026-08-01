@@ -1,0 +1,611 @@
+{
+  "id": "401eb1a0b7db",
+  "candidate_name": "Katravath Srinu",
+  "file_name": "Software_Engineer.pdf",
+  "created_at": "2026-07-25T16:52:15.678935+00:00",
+  "evaluation": {
+    "scores": {
+      "open_source": {
+        "score": 0.0,
+        "max": 35,
+        "evidence": "string"
+      },
+      "self_projects": {
+        "score": 0.0,
+        "max": 30,
+        "evidence": "string"
+      },
+      "production": {
+        "score": 0.0,
+        "max": 25,
+        "evidence": "string"
+      },
+      "technical_skills": {
+        "score": 0.0,
+        "max": 10,
+        "evidence": "string"
+      }
+    },
+    "bonus_points": {
+      "total": 0.0,
+      "breakdown": "string"
+    },
+    "deductions": {
+      "total": 0.0,
+      "reasons": "string"
+    },
+    "key_strengths": [
+      "strong programming skills",
+      "good problem solving abilities",
+      "experience with AI/ML"
+    ],
+    "areas_for_improvement": [
+      "need to improve documentation",
+      "lack of open source contributions"
+    ]
+  },
+  "resume_text": "=== BASIC INFORMATION ===\nName: Katravath Srinu\nEmail: srinuk9570@gmail.com\nPhone: Not provided\nWebsite: Not provided\nSummary: Experienced backend engineer with a strong focus on AI and machine learning development.\nLocation: Varanasi, India\nProfiles:\n  - GitHub: katravathsrinu ([github.com/srinuk9570](https://github.com/srinuk9570))\n\n=== WORK EXPERIENCE ===\n1. Backend Open Source Contributor at Company name\n   Period: 2025-01 - 2026-12\n   Description: Contributed 150+ pull requests across the full software development life cycle, optimizing API response handling logic.\n   Key Achievements:\n     • Algorithm design and implementation\n     • Performance optimization through algorithmic analysis\n2. Projects at Company name\n   Period: 2025-01 - 2026-12\n   Description: Developed an end-to-end generative AI pipeline to extract and summarize insights from financial reports using RAG with Pinecone vector database.\n   Key Achievements:\n     • RAG Pipeline Design\n     • Pinecone Vector DB Integration\n3. Projects at Company name\n   Period: 2025-01 - 2026-12\n   Description: Deployed serverless inference pipeline on AWS Lambda + API Gateway for scalable, production-ready AI querying.\n   Key Achievements:\n     • AWS Lambda & API Gateway Deployment\n4. Projects at Company name\n   Period: 2025-01 - 2026-12\n   Description: Implemented authentication workflow and persistent message storage backend, applying robust full-cycle software development practices.\n   Key Achievements:\n     • Authentication Workflow Implementation\n5. Projects at Company name\n   Period: 2025-01 - 2026-12\n   Description: Built an intrusion detection pipeline achieving 94% attack classification accuracy by analyzing 10+ GB of PCAP traffic traces.\n   Key Achievements:\n     • Attack Classification Accuracy\n6. Projects at Company name\n   Period: 2025-01 - 2026-12\n   Description: Engineered packet-level feature extraction reducing false positives by 40% – demonstrating large-scale data analytics and algorithm optimization skills.\n   Key Achievements:\n     • Packet Level Feature Extraction\n7. Projects at Company name\n   Period: 2025-01 - 2026-12\n   Description: Built a scalable multi-user messaging platform with WebSocket-based low-latency architecture supporting concurrent client communication.\n   Key Achievements:\n     • WebSocket Architecture\n8. Projects at Company name\n   Period: 2025-01 - 2026-12\n   Description: Implemented authentication workflow and persistent message storage backend, applying robust full-cycle software development practices.\n   Key Achievements:\n     • Authentication Workflow Implementation\n\n=== EDUCATION ===\n1. Expected in Computer Science and Engineering\n   Institution: Indian Institute of Technology (BHU), Varanasi\n   Period: 2027 - 2027\n\n=== SKILLS ===\n• Programming Languages\n  Level: Primary\n  Keywords: Python, C++, JavaScript, SQL\n• AI / ML\n  Keywords: LLMs, LangChain, RAG, NLP, Scikit-learn, Prompt Engineering, Generative AI\n\n=== PROJECTS ===\n1. Financial Document QA System (RAG Pipeline)\n   Description: Built an end-to-end generative AI pipeline to extract and summarize insights from financial reports using RAG with Pinecone vector database, enabling accurate large-scale document querying.\n2. VoIP Attack Detection System\n   Description: Developed an intrusion detection pipeline achieving 94% attack classification accuracy by analyzing 10+ GB of PCAP traffic traces across multiple scenarios.\n3. Real-Time Chat Application\n   Description: Built a scalable multi-user messaging platform with WebSocket-based low-latency architecture supporting concurrent client communication.\n\n=== AWARDS ===\n• BCG X HackerRank Software Engineer Intern Role Certification - BCG X (None)\n• AIR 11227 - JEE Advanced 2023 - IIT (BHU) (None)",
+  "resume_json": {
+    "basics": {
+      "name": "Katravath Srinu",
+      "email": "srinuk9570@gmail.com",
+      "phone": null,
+      "url": null,
+      "summary": "Experienced backend engineer with a strong focus on AI and machine learning development.",
+      "location": {
+        "address": null,
+        "postalCode": null,
+        "city": "Varanasi",
+        "countryCode": "India",
+        "region": null
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "katravathsrinu",
+          "url": "[github.com/srinuk9570](https://github.com/srinuk9570)"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Company name",
+        "position": "Backend Open Source Contributor",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "2026-12",
+        "summary": "Contributed 150+ pull requests across the full software development life cycle, optimizing API response handling logic.",
+        "highlights": [
+          "Algorithm design and implementation",
+          "Performance optimization through algorithmic analysis"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "2026-12",
+        "summary": "Developed an end-to-end generative AI pipeline to extract and summarize insights from financial reports using RAG with Pinecone vector database.",
+        "highlights": [
+          "RAG Pipeline Design",
+          "Pinecone Vector DB Integration"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "2026-12",
+        "summary": "Deployed serverless inference pipeline on AWS Lambda + API Gateway for scalable, production-ready AI querying.",
+        "highlights": [
+          "AWS Lambda & API Gateway Deployment"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "2026-12",
+        "summary": "Implemented authentication workflow and persistent message storage backend, applying robust full-cycle software development practices.",
+        "highlights": [
+          "Authentication Workflow Implementation"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "2026-12",
+        "summary": "Built an intrusion detection pipeline achieving 94% attack classification accuracy by analyzing 10+ GB of PCAP traffic traces.",
+        "highlights": [
+          "Attack Classification Accuracy"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "2026-12",
+        "summary": "Engineered packet-level feature extraction reducing false positives by 40% – demonstrating large-scale data analytics and algorithm optimization skills.",
+        "highlights": [
+          "Packet Level Feature Extraction"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "2026-12",
+        "summary": "Built a scalable multi-user messaging platform with WebSocket-based low-latency architecture supporting concurrent client communication.",
+        "highlights": [
+          "WebSocket Architecture"
+        ]
+      },
+      {
+        "name": "Company name",
+        "position": "Projects",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "2026-12",
+        "summary": "Implemented authentication workflow and persistent message storage backend, applying robust full-cycle software development practices.",
+        "highlights": [
+          "Authentication Workflow Implementation"
+        ]
+      }
+    ],
+    "volunteer": null,
+    "education": [
+      {
+        "institution": "Indian Institute of Technology (BHU), Varanasi",
+        "url": null,
+        "area": "Computer Science and Engineering",
+        "studyType": "Expected",
+        "startDate": "2027",
+        "endDate": "2027",
+        "score": null,
+        "courses": null
+      }
+    ],
+    "awards": [
+      {
+        "title": "BCG X HackerRank Software Engineer Intern Role Certification",
+        "date": null,
+        "awarder": "BCG X",
+        "summary": null
+      },
+      {
+        "title": "AIR 11227 - JEE Advanced 2023",
+        "date": null,
+        "awarder": "IIT (BHU)",
+        "summary": null
+      }
+    ],
+    "certificates": null,
+    "publications": null,
+    "skills": [
+      {
+        "name": "Programming Languages",
+        "level": "Primary",
+        "keywords": [
+          "Python",
+          "C++",
+          "JavaScript",
+          "SQL"
+        ]
+      },
+      {
+        "name": "AI / ML",
+        "level": null,
+        "keywords": [
+          "LLMs",
+          "LangChain",
+          "RAG",
+          "NLP",
+          "Scikit-learn",
+          "Prompt Engineering",
+          "Generative AI"
+        ]
+      }
+    ],
+    "languages": null,
+    "interests": null,
+    "references": null,
+    "projects": [
+      {
+        "name": "Financial Document QA System (RAG Pipeline)",
+        "startDate": null,
+        "endDate": null,
+        "description": "Built an end-to-end generative AI pipeline to extract and summarize insights from financial reports using RAG with Pinecone vector database, enabling accurate large-scale document querying.",
+        "highlights": [],
+        "url": "",
+        "technologies": [
+          "Python",
+          "AWS",
+          "LangChain",
+          "GPT",
+          "Pinecone"
+        ],
+        "skills": [
+          "Python",
+          "AWS",
+          "LangChain",
+          "GPT",
+          "Pinecone"
+        ]
+      },
+      {
+        "name": "VoIP Attack Detection System",
+        "startDate": null,
+        "endDate": null,
+        "description": "Developed an intrusion detection pipeline achieving 94% attack classification accuracy by analyzing 10+ GB of PCAP traffic traces across multiple scenarios.",
+        "highlights": [],
+        "url": "",
+        "technologies": [
+          "Python",
+          "SIP",
+          "PCAP",
+          "Wireshark"
+        ],
+        "skills": [
+          "Python",
+          "SIP",
+          "PCAP",
+          "Wireshark"
+        ]
+      },
+      {
+        "name": "Real-Time Chat Application",
+        "startDate": null,
+        "endDate": null,
+        "description": "Built a scalable multi-user messaging platform with WebSocket-based low-latency architecture supporting concurrent client communication.",
+        "highlights": [],
+        "url": "",
+        "technologies": [
+          "Node.js",
+          "Express.js",
+          "WebSockets",
+          "MongoDB"
+        ],
+        "skills": [
+          "Node.js",
+          "Express.js",
+          "WebSockets",
+          "MongoDB"
+        ]
+      }
+    ]
+  },
+  "total_score": 0,
+  "max_score": 100,
+  "job_match": {
+    "match_score": 9.6,
+    "matched_keywords": [
+      "across",
+      "analysis",
+      "awards",
+      "computer",
+      "description",
+      "design",
+      "development",
+      "document",
+      "education",
+      "engineer",
+      "engineering",
+      "focus",
+      "implementation",
+      "integration",
+      "key",
+      "performance",
+      "science",
+      "skills",
+      "skills.",
+      "software",
+      "system",
+      "technology",
+      "through"
+    ],
+    "missing_keywords": [
+      "about",
+      "accomplish.",
+      "adaptable",
+      "additionally",
+      "advancing",
+      "allows",
+      "also",
+      "apple",
+      "applicable",
+      "applications",
+      "appropriate",
+      "assurance",
+      "attention",
+      "base",
+      "become",
+      "becoming",
+      "benefit",
+      "benefits",
+      "between",
+      "bonuses",
+      "bring",
+      "career",
+      "cases",
+      "certain",
+      "closely",
+      "collaborate",
+      "comfortable",
+      "commission",
+      "communication",
+      "compensation",
+      "comprehensive",
+      "coordination",
+      "could",
+      "coverage",
+      "creating",
+      "creative",
+      "critical",
+      "cross-functional",
+      "customer",
+      "customer-focused"
+    ],
+    "matched_grouped": {
+      "Other": [
+        "across",
+        "analysis",
+        "awards",
+        "computer",
+        "description",
+        "design",
+        "development",
+        "document",
+        "education",
+        "engineer",
+        "engineering",
+        "focus",
+        "implementation",
+        "integration",
+        "key",
+        "performance",
+        "science",
+        "skills",
+        "skills.",
+        "software",
+        "system",
+        "technology",
+        "through"
+      ]
+    },
+    "missing_grouped": {
+      "Concepts": [
+        "testing"
+      ],
+      "Other": [
+        "about",
+        "accomplish.",
+        "adaptable",
+        "additionally",
+        "advancing",
+        "allows",
+        "also",
+        "apple",
+        "applicable",
+        "applications",
+        "appropriate",
+        "assurance",
+        "attention",
+        "base",
+        "become",
+        "becoming",
+        "benefit",
+        "benefits",
+        "between",
+        "bonuses",
+        "bring",
+        "career",
+        "cases",
+        "certain",
+        "closely",
+        "collaborate",
+        "comfortable",
+        "commission",
+        "communication",
+        "compensation",
+        "comprehensive",
+        "coordination",
+        "could",
+        "coverage",
+        "creating",
+        "creative",
+        "critical",
+        "cross-functional",
+        "customer",
+        "customer-focused",
+        "customer-focused.",
+        "customers",
+        "day-to-day",
+        "day.",
+        "debugging",
+        "dedication",
+        "delight",
+        "dental",
+        "depend",
+        "detail",
+        "determined",
+        "develop",
+        "difficult",
+        "discount",
+        "discounted",
+        "discretionary",
+        "driving",
+        "dynamic",
+        "educational",
+        "effectively",
+        "eligibility",
+        "eligible",
+        "employee",
+        "employees",
+        "ensure",
+        "enthusiasm",
+        "environment",
+        "equivalent",
+        "escalate",
+        "every",
+        "excellent",
+        "excited",
+        "execute",
+        "expenses",
+        "experiences",
+        "experiences.",
+        "fast-paced",
+        "features",
+        "formal",
+        "frameworks",
+        "free",
+        "functional",
+        "great",
+        "grow",
+        "heavily",
+        "help",
+        "here.",
+        "high-quality",
+        "highly",
+        "ideas",
+        "identify",
+        "improve",
+        "include",
+        "inspire",
+        "interpersonal",
+        "involve",
+        "ios",
+        "issues",
+        "learn",
+        "lifecycle",
+        "location.",
+        "magine",
+        "maintain",
+        "management",
+        "medical",
+        "member",
+        "meticulous",
+        "metrics",
+        "might",
+        "millions",
+        "minimum",
+        "monitor",
+        "more",
+        "need",
+        "new",
+        "nimble",
+        "note",
+        "on-the-job",
+        "one",
+        "opportunity",
+        "organizations",
+        "organized",
+        "package",
+        "part",
+        "participating",
+        "participation",
+        "passion",
+        "passionate",
+        "pay",
+        "payments",
+        "plan",
+        "plan.",
+        "plans",
+        "play",
+        "position",
+        "practice",
+        "preferred",
+        "problem",
+        "problems",
+        "product",
+        "products",
+        "program",
+        "programs",
+        "programs.",
+        "progress",
+        "proven",
+        "provides",
+        "purchase",
+        "qa.",
+        "qualifications",
+        "qualifying",
+        "quality",
+        "quickly.",
+        "range",
+        "range.",
+        "receive",
+        "recent",
+        "regression",
+        "reimbursement",
+        "related",
+        "relationship",
+        "relies",
+        "relocation.",
+        "requirements",
+        "resolution",
+        "responsibilities",
+        "restricted",
+        "results",
+        "results-driven",
+        "retirement",
+        "rewarding",
+        "risk",
+        "rock-solid",
+        "role.",
+        "seeking",
+        "self-motivated",
+        "services",
+        "shape",
+        "shareholder",
+        "shipping",
+        "solver",
+        "stock",
+        "subject",
+        "support",
+        "system.",
+        "tasks",
+        "teams",
+        "technical",
+        "telling",
+        "terms",
+        "test",
+        "them.",
+        "there",
+        "thinker",
+        "thinkers",
+        "throughout",
+        "tight",
+        "timely",
+        "tools",
+        "total",
+        "track",
+        "tuition.",
+        "types",
+        "unique",
+        "unit",
+        "various",
+        "very",
+        "voluntarily",
+        "want",
+        "watch",
+        "watchos",
+        "way",
+        "well",
+        "what",
+        "within"
+      ]
+    },
+    "suggestions": {
+      "Concepts": [
+        "testing"
+      ]
+    }
+  },
+  "job_description": "magine what you could do here. At Apple, new ideas have a way of becoming great products, services, and customer experiences very quickly. Bring passion and dedication to your job and there's no telling what you could accomplish.\r\n\r\nThe watchOS QA team is seeking a **QA Engineer** to help ensure our Watch experience is rock-solid and customer-focused. We're looking for critical thinkers who want to play a key role in qualifying Watch System Experiences and the frameworks that support them. We practice nimble, fast-paced development that relies heavily on a tight relationship between Engineering and QA.\r\n\r\nAs a member of our passionate watchOS QA team, you'll have the unique and rewarding opportunity to shape and improve the software that allows our products to delight and inspire millions of Apple customers every day.\r\n\r\nDescription\r\n\r\nIn this position, you will need to be self-motivated with strong technical and interpersonal skills. Day-to-day tasks will involve functional testing of iOS and watchOS applications, with a focus on Watch System Experiences. Responsibilities include design and implementation of test plans and test cases, risk analysis, cross-functional testing coordination, and integration testing across the system.\r\n\r\n\",\"responsibilities\":\"Develop and maintain comprehensive test plans and test cases\r\n\r\nExecute various types of testing including functional, regression, and performance testing\r\n\r\nDocument and track issues using appropriate tools\r\n\r\nCollaborate closely with development teams\r\n\r\nMonitor quality metrics throughout the product development lifecycle\r\n\r\nIdentify and escalate critical issues to ensure timely resolution\r\n\r\nPreferred Qualifications\r\n\r\nPassionate about Shipping with Quality\r\n\r\nEnthusiasm for customer-focused design and high-quality technology\r\n\r\nPassion for debugging difficult problems and driving results with cross-functional teams\r\n\r\nCreative thinker and strong problem solver with meticulous attention to detail\r\n\r\nProven experience in Software Quality Assurance creating test plans for new products and features\r\n\r\nComfortable and adaptable in a dynamic, fast-paced environment\r\n\r\nExcellent communication skills with ability to collaborate effectively across engineering teams, management, and other organizations within Apple\r\n\r\nHighly organized, self-motivated, and results-driven\r\n\r\nExcited about Watch System Experiences and watchOS\r\n\r\nMinimum Qualifications\r\n\r\nBS in Computer Science or equivalent recent on-the-job experience in Software QA.\r\n\r\nPay & Benefits\r\n\r\nAt Apple, base pay is one part of our total compensation package and is determined within a range. This provides the opportunity to progress as you grow and develop within a role. The base pay range for this role is between $114,800 and $236,300, and your base pay will depend on your skills, qualifications, experience, and location.\r\n\r\nApple employees also have the opportunity to become an Apple shareholder through participation in Apple's discretionary employee stock programs. Apple employees are eligible for discretionary restricted stock unit awards, and can purchase Apple stock at a discount if voluntarily participating in Apple's Employee Stock Purchase Plan. You'll also receive benefits including: Comprehensive medical and dental coverage, retirement benefits, a range of discounted products and free services, and for formal education related to advancing your career at Apple, reimbursement for certain educational expenses - including tuition. Additionally, this role might be eligible for discretionary bonuses or commission payments as well as relocation. Learn more about Apple Benefits\r\n\r\nNote: Apple benefit, compensation and employee stock programs are subject to eligibility requirements and other terms of the applicable plan or program"
+}

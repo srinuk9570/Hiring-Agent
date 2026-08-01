@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Log in — Hiring Agent</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f1f6fb; --panel:#ffffff; --line:#e2e8f0; --ink:#0f172a; --muted:#64748b;
+    --accent:#0ea5e9; --accent-deep:#0369a1; --bad:#dc2626;
+    --display:'Space Grotesk',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;}
+  .card{width:100%;max-width:400px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:40px;box-shadow:0 1px 3px rgba(15,23,42,.05);}
+  .brand{font-family:var(--display);font-weight:700;font-size:19px;text-align:center;}
+  .brand .dot{color:var(--accent);}
+  h1{font-family:var(--display);font-size:22px;font-weight:700;margin:22px 0 4px;text-align:center;letter-spacing:-0.01em;}
+  p.sub{color:var(--muted);font-size:13.5px;text-align:center;margin-bottom:28px;}
+  label{display:block;font-size:13px;color:var(--muted);margin:16px 0 6px;font-weight:500;}
+  input{width:100%;padding:12px 13px;background:#fff;border:1.5px solid var(--line);border-radius:9px;color:var(--ink);font-size:14px;font-family:var(--body);}
+  input:focus{outline:none;border-color:var(--accent);}
+  button{width:100%;margin-top:24px;padding:13px;border:none;border-radius:9px;background:var(--ink);color:#fff;font-weight:600;font-size:14px;cursor:pointer;font-family:var(--body);}
+  button:hover{background:var(--accent-deep);}
+  .error{margin-top:16px;padding:11px 13px;border:1px solid #f5c6c2;background:rgba(220,38,38,.06);color:var(--bad);border-radius:9px;font-size:13px;}
+  .foot{margin-top:24px;text-align:center;font-size:13px;color:var(--muted);}
+  .foot a{color:var(--accent-deep);text-decoration:none;font-weight:600;}
+  .back{display:block;text-align:center;margin-top:18px;font-size:12.5px;color:var(--muted);text-decoration:none;}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand">Hiring<span class="dot">·</span>Agent</div>
+    <h1>Welcome back</h1>
+    <p class="sub">Log in to continue screening resumes.</p>
+
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+
+    <form method="POST" action="/login{% if request.args.get('next') %}?next={{ request.args.get('next') }}{% endif %}">
+      <label for="username">Username or email</label>
+      <input type="text" id="username" name="username" required autofocus>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Log in</button>
+    </form>
+
+    <div class="foot">Don't have an account? <a href="/signup">Sign up</a></div>
+    <a class="back" href="/">&larr; Back to home</a>
+  </div>
+</body>
+</html>

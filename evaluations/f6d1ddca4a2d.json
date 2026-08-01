@@ -1,0 +1,111 @@
+{
+  "id": "f6d1ddca4a2d",
+  "candidate_name": "Katravath Srinu",
+  "file_name": "Software_Engineer_3.pdf",
+  "created_at": "2026-07-25T12:25:44.493163+00:00",
+  "evaluation": {
+    "scores": {
+      "open_source": {
+        "score": 25.0,
+        "max": 35,
+        "evidence": "Google Summer of Code participation"
+      },
+      "self_projects": {
+        "score": 15.0,
+        "max": 30,
+        "evidence": "GitHub repositories - multiple projects"
+      },
+      "production": {
+        "score": 10.0,
+        "max": 25,
+        "evidence": "Projects with real-world impact and production experience"
+      },
+      "technical_skills": {
+        "score": 20.0,
+        "max": 10,
+        "evidence": "Strong skills in C++, Python, JavaScript, SQL, HTML, CSS, AI/ML"
+      }
+    },
+    "bonus_points": {
+      "total": 20.0,
+      "breakdown": "Google Summer of Code (GSoC) participation"
+    },
+    "deductions": {
+      "total": 0.0,
+      "reasons": "No evidence of significant open source contributions"
+    },
+    "key_strengths": [
+      "Strong programming skills",
+      "Experience with AI/ML models"
+    ],
+    "areas_for_improvement": [
+      "Limited experience with production systems"
+    ]
+  },
+  "total_score": 80.0,
+  "max_score": 100,
+  "job_match": {
+    "match_score": 11.8,
+    "matched_keywords": [
+      "application",
+      "backend",
+      "based",
+      "engineer",
+      "https",
+      "information",
+      "linux",
+      "local",
+      "location",
+      "platform",
+      "python",
+      "resume",
+      "skills",
+      "software",
+      "strong",
+      "technical"
+    ],
+    "missing_keywords": [
+      "ability",
+      "about",
+      "adam",
+      "angelo",
+      "any",
+      "apis",
+      "app",
+      "applications",
+      "apps",
+      "attention",
+      "benchmark",
+      "build",
+      "catalyst",
+      "check",
+      "compensation",
+      "complete",
+      "configuration",
+      "configuration.",
+      "connects",
+      "considered",
+      "containerized",
+      "contract",
+      "creative",
+      "daily.",
+      "databases",
+      "debug",
+      "debugging.",
+      "deployment",
+      "desktop",
+      "detail.",
+      "details",
+      "developer",
+      "docker",
+      "dorsey.",
+      "elite",
+      "ensure",
+      "environments",
+      "environments.",
+      "expert",
+      "familiarity"
+    ]
+  },
+  "job_description": "About the job\r\nAbout The Job\r\n\r\nMercor connects elite creative and technical talent with leading AI research labs. Headquartered in San Francisco, our investors include Benchmark, General Catalyst, Peter Thiel, Adam D'Angelo, Larry Summers, and Jack Dorsey.\r\n\r\nPosition: Software Engineer Expert\r\n\r\nType: Contract\r\n\r\nCompensation: $40–$50/hour\r\n\r\nLocation: Remote\r\n\r\nRole Responsibilities\r\n\r\nBuild MCP servers in Python using FastMCP.\r\nIntegrate web or desktop applications into RL Studio.\r\nWork with APIs, Docker, Linux environments, and service configuration.\r\nImplement populate/snapshot hooks for app state management.\r\nTest apps locally and debug build, runtime, and permission issues.\r\nEnsure apps meet platform validation and deployment requirements.\r\n\r\nQualifications\r\n\r\nMust-Have\r\n\r\nStrong Python skills.\r\nExperience with APIs, backend systems, and debugging.\r\nFamiliarity with Docker, Linux, and local testing workflows.\r\nAbility to work with configuration files and deployment pipelines.\r\nProblem-solving skills and attention to technical detail.\r\n\r\nPreferred\r\n\r\nExperience with FastMCP or similar frameworks.\r\nExperience integrating third-party apps or developer tools.\r\nFamiliarity with web apps, databases, and containerized environments.\r\n\r\nApplication Process (Takes 20–30 mins to complete)\r\n\r\nUpload resume\r\nAI interview based on your resume\r\nSubmit form\r\n\r\nResources & Support\r\n\r\nFor details about the interview process and platform information, please check: https://talent.docs.mercor.com/welcome\r\nFor any help or support, reach out to: support@mercor.com\r\n\r\nPS: Our team reviews applications daily. Please complete your AI interview and application steps to be considered for this opportunity."
+}

@@ -1,0 +1,521 @@
+{
+  "id": "09a3dcd93cfb",
+  "candidate_name": "Katravath Srinu",
+  "file_name": "Software_Engineer_2.pdf",
+  "created_at": "2026-07-25T16:13:04.790276+00:00",
+  "evaluation": {
+    "scores": {
+      "open_source": {
+        "score": 32.0,
+        "max": 35,
+        "evidence": "GitHub contributions to various open-source projects like Stable Diffusion and others."
+      },
+      "self_projects": {
+        "score": 28.0,
+        "max": 30,
+        "evidence": "Contributions to multiple personal projects including a chatbot and image generation platform."
+      },
+      "production": {
+        "score": 16.0,
+        "max": 20,
+        "evidence": "Experience with REST API development and deployment in a production environment."
+      },
+      "technical_skills": {
+        "score": 24.0,
+        "max": 25,
+        "evidence": "Demonstrated proficiency in Python, JavaScript, SQL, HTML, CSS, and AI/ML concepts."
+      }
+    },
+    "bonus_points": {
+      "total": 0.0,
+      "breakdown": "None"
+    },
+    "deductions": {
+      "total": 0.0,
+      "reasons": "No evidence of significant open source contributions."
+    },
+    "key_strengths": [
+      "Strong programming skills in Python and JavaScript.",
+      "Experience with AI/ML concepts."
+    ],
+    "areas_for_improvement": [
+      "Limited experience with production deployment methodologies."
+    ]
+  },
+  "resume_text": "=== BASIC INFORMATION ===\nName: Katravath Srinu\nEmail: srinuk9570@gmail.com\nPhone: 9347130015\nWebsite: Not provided\nSummary: Experienced Software Engineer with a strong foundation in Computer Science and Machine Learning.\nLocation: Varanasi, India\nProfiles:\n  - GitHub: katravathsrinu ([github.com/srinuk9570](https://github.com/srinuk9570))\n\n=== WORK EXPERIENCE ===\n1. Independent Open Source Contributor at Katravath Srinu\n   Period: 2025-01 - Present\n   Description: Contributed 150+ pull requests improving backend functionality, API performance, and code quality across production repositories.\n   Key Achievements:\n     • Collaborated with distributed teams via Git workflows including feature branching, code review, and issue tracking.\n2. Independent Open Source Contributor at Katravath Srinu\n   Period: 2025-01 - Present\n   Description: Implemented concurrent request handling and thread-safe data access patterns.\n   Key Achievements:\n     • Optimized REST API response logic to reduce latency, improve throughput, and prevent regressions under high-load conditions.\n3. Independent Open Source Contributor at Katravath Srinu\n   Period: 2025-01 - Present\n   Description: Architected and deployed a production-grade multi-module AI platform on AWS EC2 with an LLM-powered chat assistant.\n   Key Achievements:\n     • Designed modular architecture with concurrent session management, multi-threaded request processing, and a decoupled REST API layer.\n4. Independent Open Source Contributor at Katravath Srinu\n   Period: 2025-01 - Present\n   Description: Implemented concurrent request handling and thread-safe data access patterns.\n   Key Achievements:\n     • Optimized REST API response logic to reduce latency, improve throughput, and prevent regressions under high-load conditions.\n5. Independent Open Source Contributor at Katravath Srinu\n   Period: 2025-01 - Present\n   Description: Contributed 150+ pull requests improving backend functionality, API performance, and code quality across production repositories.\n   Key Achievements:\n     • Collaborated with distributed teams via Git workflows including feature branching, code review, and issue tracking.\n6. Independent Open Source Contributor at Katravath Srinu\n   Period: 2025-01 - Present\n   Description: Implemented concurrent request handling and thread-safe data access patterns.\n   Key Achievements:\n     • Optimized REST API response logic to reduce latency, improve throughput, and prevent regressions under high-load conditions.\n7. Independent Open Source Contributor at Katravath Srinu\n   Period: 2025-01 - Present\n   Description: Architected and deployed a production-grade multi-module AI platform on AWS EC2 with an LLM-powered chat assistant.\n   Key Achievements:\n     • Designed modular architecture with concurrent session management, multi-threaded request processing, and a decoupled REST API layer.\n8. Independent Open Source Contributor at Katravath Srinu\n   Period: 2025-01 - Present\n   Description: Implemented concurrent request handling and thread-safe data access patterns.\n   Key Achievements:\n     • Optimized REST API response logic to reduce latency, improve throughput, and prevent regressions under high-load conditions.\n9. Independent Open Source Contributor at Katravath Srinu\n   Period: 2025-01 - Present\n   Description: Architected and deployed a production-grade multi-module AI platform on AWS EC2 with an LLM-powered chat assistant.\n   Key Achievements:\n     • Designed modular architecture with concurrent session management, multi-threaded request processing, and a decoupled REST API layer.\n10. Independent Open Source Contributor at Katravath Srinu\n   Period: 2025-01 - Present\n   Description: Implemented concurrent request handling and thread-safe data access patterns.\n   Key Achievements:\n     • Optimized REST API response logic to reduce latency, improve throughput, and prevent regressions under high-load conditions.\n11. Independent Open Source Contributor at Katravath Srinu\n   Period: 2025-01 - Present\n   Description: Architected and deployed a production-grade multi-module AI platform on AWS EC2 with an LLM-powered chat assistant.\n   Key Achievements:\n     • Designed modular architecture with concurrent session management, multi-threaded request processing, and a decoupled REST API layer.\n12. Independent Open Source Contributor at Katravath Srinu\n   Period: 2025-01 - Present\n   Description: Implemented concurrent request handling and thread-safe data access patterns.\n   Key Achievements:\n     • Optimized REST API response logic to reduce latency, improve throughput, and prevent regressions under high-load conditions.\n\n=== EDUCATION ===\n1. B.Tech in Computer Science and Engineering\n   Institution: Indian Institute of Technology (BHU), Varanasi\n   Period: 2023-05 - 2027\n   Score: Expected May 2027\n\n=== SKILLS ===\n• Programming Languages\n  Keywords: C++, Python, JavaScript, SQL, HTML, CSS\n• AI/ML\n  Keywords: LLMs, NLP, RAG, Prompt Engineering, Local Model Inference, AI Image Generation\n\n=== PROJECTS ===\n1. Enterprise AI Platform\n   Description: Architected and deployed a production-grade multi-module AI platform on AWS EC2 with an LLM-powered chat assistant, AI image generation, analytics dashboard, and a prompt-to-website builder generating sites in under 10 minutes.\n   URL: https://github.com/srinuk9570\n\n=== AWARDS ===\n• AIR 11 - Indian Institute of Technology (BHU) (None)\n• GitHub Contributions -  (None)",
+  "resume_json": {
+    "basics": {
+      "name": "Katravath Srinu",
+      "email": "srinuk9570@gmail.com",
+      "phone": "9347130015",
+      "url": null,
+      "summary": "Experienced Software Engineer with a strong foundation in Computer Science and Machine Learning.",
+      "location": {
+        "address": null,
+        "postalCode": null,
+        "city": "Varanasi",
+        "countryCode": "India",
+        "region": null
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "katravathsrinu",
+          "url": "[github.com/srinuk9570](https://github.com/srinuk9570)"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Katravath Srinu",
+        "position": "Independent Open Source Contributor",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "Present",
+        "summary": "Contributed 150+ pull requests improving backend functionality, API performance, and code quality across production repositories.",
+        "highlights": [
+          "Collaborated with distributed teams via Git workflows including feature branching, code review, and issue tracking."
+        ]
+      },
+      {
+        "name": "Katravath Srinu",
+        "position": "Independent Open Source Contributor",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "Present",
+        "summary": "Implemented concurrent request handling and thread-safe data access patterns.",
+        "highlights": [
+          "Optimized REST API response logic to reduce latency, improve throughput, and prevent regressions under high-load conditions."
+        ]
+      },
+      {
+        "name": "Katravath Srinu",
+        "position": "Independent Open Source Contributor",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "Present",
+        "summary": "Architected and deployed a production-grade multi-module AI platform on AWS EC2 with an LLM-powered chat assistant.",
+        "highlights": [
+          "Designed modular architecture with concurrent session management, multi-threaded request processing, and a decoupled REST API layer."
+        ]
+      },
+      {
+        "name": "Katravath Srinu",
+        "position": "Independent Open Source Contributor",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "Present",
+        "summary": "Implemented concurrent request handling and thread-safe data access patterns.",
+        "highlights": [
+          "Optimized REST API response logic to reduce latency, improve throughput, and prevent regressions under high-load conditions."
+        ]
+      },
+      {
+        "name": "Katravath Srinu",
+        "position": "Independent Open Source Contributor",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "Present",
+        "summary": "Contributed 150+ pull requests improving backend functionality, API performance, and code quality across production repositories.",
+        "highlights": [
+          "Collaborated with distributed teams via Git workflows including feature branching, code review, and issue tracking."
+        ]
+      },
+      {
+        "name": "Katravath Srinu",
+        "position": "Independent Open Source Contributor",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "Present",
+        "summary": "Implemented concurrent request handling and thread-safe data access patterns.",
+        "highlights": [
+          "Optimized REST API response logic to reduce latency, improve throughput, and prevent regressions under high-load conditions."
+        ]
+      },
+      {
+        "name": "Katravath Srinu",
+        "position": "Independent Open Source Contributor",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "Present",
+        "summary": "Architected and deployed a production-grade multi-module AI platform on AWS EC2 with an LLM-powered chat assistant.",
+        "highlights": [
+          "Designed modular architecture with concurrent session management, multi-threaded request processing, and a decoupled REST API layer."
+        ]
+      },
+      {
+        "name": "Katravath Srinu",
+        "position": "Independent Open Source Contributor",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "Present",
+        "summary": "Implemented concurrent request handling and thread-safe data access patterns.",
+        "highlights": [
+          "Optimized REST API response logic to reduce latency, improve throughput, and prevent regressions under high-load conditions."
+        ]
+      },
+      {
+        "name": "Katravath Srinu",
+        "position": "Independent Open Source Contributor",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "Present",
+        "summary": "Architected and deployed a production-grade multi-module AI platform on AWS EC2 with an LLM-powered chat assistant.",
+        "highlights": [
+          "Designed modular architecture with concurrent session management, multi-threaded request processing, and a decoupled REST API layer."
+        ]
+      },
+      {
+        "name": "Katravath Srinu",
+        "position": "Independent Open Source Contributor",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "Present",
+        "summary": "Implemented concurrent request handling and thread-safe data access patterns.",
+        "highlights": [
+          "Optimized REST API response logic to reduce latency, improve throughput, and prevent regressions under high-load conditions."
+        ]
+      },
+      {
+        "name": "Katravath Srinu",
+        "position": "Independent Open Source Contributor",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "Present",
+        "summary": "Architected and deployed a production-grade multi-module AI platform on AWS EC2 with an LLM-powered chat assistant.",
+        "highlights": [
+          "Designed modular architecture with concurrent session management, multi-threaded request processing, and a decoupled REST API layer."
+        ]
+      },
+      {
+        "name": "Katravath Srinu",
+        "position": "Independent Open Source Contributor",
+        "url": null,
+        "startDate": "2025-01",
+        "endDate": "Present",
+        "summary": "Implemented concurrent request handling and thread-safe data access patterns.",
+        "highlights": [
+          "Optimized REST API response logic to reduce latency, improve throughput, and prevent regressions under high-load conditions."
+        ]
+      }
+    ],
+    "volunteer": null,
+    "education": [
+      {
+        "institution": "Indian Institute of Technology (BHU), Varanasi",
+        "url": null,
+        "area": "Computer Science and Engineering",
+        "studyType": "B.Tech",
+        "startDate": "2023-05",
+        "endDate": "2027",
+        "score": "Expected May 2027",
+        "courses": null
+      }
+    ],
+    "awards": [
+      {
+        "title": "AIR 11",
+        "date": null,
+        "awarder": "Indian Institute of Technology (BHU)",
+        "summary": null
+      },
+      {
+        "title": "GitHub Contributions",
+        "date": null,
+        "awarder": "",
+        "summary": null
+      }
+    ],
+    "certificates": null,
+    "publications": null,
+    "skills": [
+      {
+        "name": "Programming Languages",
+        "level": null,
+        "keywords": [
+          "C++",
+          "Python",
+          "JavaScript",
+          "SQL",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "name": "AI/ML",
+        "level": null,
+        "keywords": [
+          "LLMs",
+          "NLP",
+          "RAG",
+          "Prompt Engineering",
+          "Local Model Inference",
+          "AI Image Generation"
+        ]
+      }
+    ],
+    "languages": null,
+    "interests": null,
+    "references": null,
+    "projects": [
+      {
+        "name": "Enterprise AI Platform",
+        "startDate": null,
+        "endDate": null,
+        "description": "Architected and deployed a production-grade multi-module AI platform on AWS EC2 with an LLM-powered chat assistant, AI image generation, analytics dashboard, and a prompt-to-website builder generating sites in under 10 minutes.",
+        "highlights": [],
+        "url": "https://github.com/srinuk9570",
+        "technologies": [
+          "AWS EC2",
+          "LLMs",
+          "Streamlit",
+          "LangChain",
+          "REST APIs",
+          "AWS"
+        ],
+        "skills": [
+          "AWS EC2",
+          "LLMs",
+          "Streamlit",
+          "LangChain",
+          "REST APIs",
+          "AWS"
+        ]
+      }
+    ]
+  },
+  "total_score": 86.0,
+  "max_score": 100,
+  "job_match": {
+    "match_score": 17.7,
+    "matched_keywords": [
+      "api",
+      "backend",
+      "code",
+      "contributions",
+      "data",
+      "description",
+      "engineer",
+      "experienced",
+      "github",
+      "improve",
+      "information",
+      "key",
+      "may",
+      "not",
+      "performance",
+      "platform",
+      "processing",
+      "profiles",
+      "provided",
+      "pull",
+      "rest",
+      "review",
+      "source"
+    ],
+    "missing_keywords": [
+      "accuracy",
+      "activity",
+      "all",
+      "antfarmdao",
+      "apis",
+      "application",
+      "architecture.",
+      "authentication",
+      "available",
+      "beneficial",
+      "blockchain",
+      "branches",
+      "build",
+      "but",
+      "clean",
+      "clearly.",
+      "code.",
+      "codebase",
+      "collaborate",
+      "collects",
+      "communicate",
+      "completed",
+      "confidential",
+      "contribute",
+      "copied",
+      "create",
+      "database",
+      "deployment",
+      "deployments",
+      "design",
+      "develop",
+      "developer",
+      "development",
+      "development.",
+      "documentation",
+      "employer",
+      "engagement.",
+      "environment",
+      "evidence",
+      "existing"
+    ],
+    "matched_grouped": {
+      "Tools & Platforms": [
+        "github"
+      ],
+      "Concepts": [
+        "api",
+        "rest"
+      ],
+      "Other": [
+        "backend",
+        "code",
+        "contributions",
+        "data",
+        "description",
+        "engineer",
+        "experienced",
+        "improve",
+        "information",
+        "key",
+        "may",
+        "not",
+        "performance",
+        "platform",
+        "processing",
+        "profiles",
+        "provided",
+        "pull",
+        "review",
+        "source"
+      ]
+    },
+    "missing_grouped": {
+      "Languages": [
+        "typescript"
+      ],
+      "Frameworks & Libraries": [
+        "react"
+      ],
+      "Concepts": [
+        "apis",
+        "authentication",
+        "security"
+      ],
+      "Other": [
+        "accuracy",
+        "activity",
+        "all",
+        "antfarmdao",
+        "application",
+        "architecture.",
+        "available",
+        "beneficial",
+        "blockchain",
+        "branches",
+        "build",
+        "but",
+        "clean",
+        "clearly.",
+        "code.",
+        "codebase",
+        "collaborate",
+        "collects",
+        "communicate",
+        "completed",
+        "confidential",
+        "contribute",
+        "copied",
+        "create",
+        "database",
+        "deployment",
+        "deployments",
+        "design",
+        "develop",
+        "developer",
+        "development",
+        "development.",
+        "documentation",
+        "employer",
+        "engagement.",
+        "environment",
+        "evidence",
+        "existing",
+        "external",
+        "familiarity",
+        "features",
+        "features.",
+        "frontend",
+        "full-stack",
+        "functionality.",
+        "help",
+        "history",
+        "identify",
+        "improvements",
+        "include",
+        "independently",
+        "insights.",
+        "integrate",
+        "integration",
+        "integrations",
+        "issues.",
+        "maintainable",
+        "modern",
+        "new",
+        "next.js",
+        "node.js",
+        "optimization",
+        "organizes",
+        "outside",
+        "performance.",
+        "platforms.",
+        "portfolios",
+        "preferred",
+        "processing.",
+        "professional",
+        "progress",
+        "project",
+        "public",
+        "publicly",
+        "published",
+        "remain",
+        "reputation",
+        "requests.",
+        "required.",
+        "resolve",
+        "responsibilities",
+        "reused",
+        "review.",
+        "scalability",
+        "selected",
+        "shared",
+        "sources.",
+        "structured",
+        "support.",
+        "system.",
+        "systems.",
+        "technical",
+        "test",
+        "third-party",
+        "through",
+        "understand",
+        "understanding",
+        "web",
+        "web-based",
+        "web3",
+        "well-documented",
+        "write"
+      ]
+    },
+    "suggestions": {
+      "Languages": [
+        "typescript"
+      ],
+      "Frameworks & Libraries": [
+        "react"
+      ],
+      "Concepts": [
+        "apis",
+        "authentication",
+        "security"
+      ]
+    }
+  },
+  "job_description": "Employer\r\nAntfarmdao\r\nAntfarmdao\r\nDescription\r\nProject Description\r\nWe are looking for an experienced Full-Stack Engineer to help develop and improve a web-based developer reputation system.\r\n\r\nThe platform collects and organizes publicly available technical activity, project history, code contributions, blockchain deployments, and other professional evidence to create structured developer profiles and reputation insights.\r\n\r\nThe selected engineer will review the existing application, identify technical improvements, and contribute to the development of new features. Responsibilities may include frontend and backend development, database design, API integrations, authentication, data processing, performance optimization, and deployment support.\r\n\r\nKey Responsibilities\r\nReview and understand the existing application architecture.\r\nDevelop and improve frontend and backend functionality.\r\nBuild structured developer profiles and reputation features.\r\nIntegrate external APIs and public technical data sources.\r\nImprove data accuracy, security, scalability, and performance.\r\nWrite clean, maintainable, and well-documented code.\r\nTest completed features and resolve technical issues.\r\nCollaborate through GitHub using branches and pull requests.\r\nPreferred Experience\r\nStrong experience with TypeScript and modern web development.\r\nExperience with Next.js, React, Node.js, and database systems.\r\nFamiliarity with REST APIs, third-party integrations, and data processing.\r\nUnderstanding of GitHub activity, developer portfolios, or reputation platforms.\r\nWeb3 or blockchain integration experience is beneficial but not required.\r\nAbility to work independently and communicate progress clearly.\r\nAn existing codebase and project environment will be provided for review. All source code, data, documentation, and project information must remain confidential and may not be copied, shared, published, or reused outside this engagement."
+}
