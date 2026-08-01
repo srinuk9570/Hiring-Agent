@@ -248,27 +248,78 @@ def set_job(jid,**kw):
     with JOBS_LOCK:
         if jid in JOBS: JOBS[jid].update(kw)
 
-def process_job(jid,pp,fn,jd,own):
+def process_job(jid, pp, fn, jd, own):
     try:
-        set_job(jid,status="running",step="Reading PDF...")
-        ph = PDFHandler(); rd = ph.extract_json_from_pdf(pp)
-        if not is_valid_resume_data(rd): set_job(jid,status="error",error="Could not extract resume"); return
-        set_job(jid,step="Analyzing resume with AI..."); gd = {}
+        logger.info("========== START PROCESS ==========")
+
+        set_job(jid, status="running", step="Reading PDF...")
+
+        logger.info("Creating PDFHandler...")
+        ph = PDFHandler()
+
+        logger.info("Calling extract_json_from_pdf...")
+        rd = ph.extract_json_from_pdf(pp)
+
+        logger.info("Finished extract_json_from_pdf")
+
+        if not is_valid_resume_data(rd):
+            logger.error("Resume extraction failed")
+            set_job(jid, status="error", error="Could not extract resume")
+            return
+
+        logger.info("Starting AI analysis...")
+        set_job(jid, step="Analyzing resume with AI...")
+
+        gd = {}
         pr = rd.basics.profiles if rd.basics else []
-        gp = find_profile(pr,"Github")
+        gp = find_profile(pr, "Github")
+
         if gp:
-            try: gd = fetch_and_display_github_info(gp.url)
-            except: pass
-        set_job(jid,step="Scoring resume..."); ev,rt = run_evaluation(rd,gd); ed = evaluation_to_dict(ev)
-        cn = fn.replace(".pdf","")
-        if rd.basics and rd.basics.name: cn = rd.basics.name
-        res = {"id":jid,"owner":own,"candidate_name":cn,"file_name":fn,"created_at":datetime.now(timezone.utc).isoformat(),"evaluation":ed,"resume_text":rt,"resume_json":rd.model_dump() if hasattr(rd,"model_dump") else {}}
+            try:
+                gd = fetch_and_display_github_info(gp.url)
+            except Exception as e:
+                logger.warning(f"GitHub fetch failed: {e}")
+
+        logger.info("Scoring resume...")
+        set_job(jid, step="Scoring resume...")
+
+        ev, rt = run_evaluation(rd, gd)
+        ed = evaluation_to_dict(ev)
+
+        cn = fn.replace(".pdf", "")
+        if rd.basics and rd.basics.name:
+            cn = rd.basics.name
+
+        res = {
+            "id": jid,
+            "owner": own,
+            "candidate_name": cn,
+            "file_name": fn,
+            "created_at": datetime.now(timezone.utc).isoformat(),
+            "evaluation": ed,
+            "resume_text": rt,
+            "resume_json": rd.model_dump() if hasattr(rd, "model_dump") else {}
+        }
+
         res.update(compute_total_score(ed))
-        if jd: res["job_match"]=match_job_description(rt,jd); res["job_description"]=jd
-        with open(os.path.join(app.config['HISTORY_FOLDER'],f"{jid}.json"),"w",encoding="utf-8") as f: json.dump(res,f,indent=2,ensure_ascii=False)
-        set_job(jid,status="done",step="Done",result=res)
+
+        if jd:
+            res["job_match"] = match_job_description(rt, jd)
+            res["job_description"] = jd
+
+        with open(
+            os.path.join(app.config["HISTORY_FOLDER"], f"{jid}.json"),
+            "w",
+            encoding="utf-8"
+        ) as f:
+            json.dump(res, f, indent=2, ensure_ascii=False)
+
+        logger.info("Job completed successfully")
+        set_job(jid, status="done", step="Done", result=res)
+
     except Exception as e:
-        logger.exception("Eval failed"); set_job(jid,status="error",error=str(e))
+        logger.exception("Evaluation failed")
+        set_job(jid, status="error", error=str(e))
 
 # ============================================================
 # ROUTES - AUTH
