@@ -166,15 +166,25 @@ def _first_of(d,keys,default=None):
         if v: return v
     return default
 
+# ============================================================
+# ROBUST JSON PARSER - NEVER FAILS
+# ============================================================
 def robust_json_parse(text: str) -> dict:
+    """Parse JSON from LLM response - multiple fallback strategies, never raises"""
     cleaned = text.strip()
+    
+    # Remove markdown fences
     cleaned = re.sub(r'```(?:json)?\s*\n?', '', cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r'\n?```\s*', '', cleaned)
     cleaned = cleaned.strip()
+    
+    # Strategy 1: Direct parse
     try:
         return json.loads(cleaned)
     except json.JSONDecodeError:
         pass
+    
+    # Strategy 2: Extract between { and }
     start = cleaned.find('{')
     end = cleaned.rfind('}')
     if start != -1 and end != -1 and end > start:
@@ -182,7 +192,10 @@ def robust_json_parse(text: str) -> dict:
             return json.loads(cleaned[start:end+1])
         except json.JSONDecodeError:
             pass
-    fixed = re.sub(r',\s*}', '}', cleaned)
+    
+    # Strategy 3: Fix common issues
+    fixed = cleaned
+    fixed = re.sub(r',\s*}', '}', fixed)
     fixed = re.sub(r',\s*]', ']', fixed)
     fixed = fixed.replace("'", '"')
     s = fixed.find('{'); e = fixed.rfind('}')
@@ -191,25 +204,89 @@ def robust_json_parse(text: str) -> dict:
         return json.loads(fixed)
     except json.JSONDecodeError:
         pass
+    
+    # Strategy 4: Fix truncated JSON
+    lines = fixed.split('\n')
+    while lines and not lines[-1].strip(): lines.pop()
+    if lines:
+        ll = lines[-1].strip()
+        if ll.count('"') % 2 != 0:
+            lines.pop()
+            if lines and lines[-1].rstrip().endswith(','): lines[-1] = lines[-1].rstrip()[:-1]
+    fixed = '\n'.join(lines)
+    ob = fixed.count('{') - fixed.count('}')
+    oa = fixed.count('[') - fixed.count(']')
+    fixed = fixed.rstrip().rstrip(',')
+    suffix = ']' * max(0, oa) + '}' * max(0, ob)
+    try:
+        return json.loads(fixed + suffix)
+    except json.JSONDecodeError:
+        pass
+    
+    # Strategy 5: Manual regex extraction - NEVER FAILS
     logger.warning("All JSON parse strategies failed, using manual extraction")
     return _manual_extract(text)
 
 def _manual_extract(text: str) -> dict:
+    """Manual extraction using regex - guaranteed to return something"""
     result = {}
-    for key in ['match_score','score','overall_score','technical_accuracy','communication_clarity','confidence_level','correctness_score','code_quality_score','efficiency_score','edge_cases_score','filler_words_count','word_count','duration_minutes']:
+    
+    # Extract numbers
+    for key in ['match_score','score','overall_score','technical_accuracy','communication_clarity',
+                'confidence_level','correctness_score','code_quality_score','efficiency_score',
+                'edge_cases_score','filler_words_count','word_count','duration_minutes']:
         m = re.search(rf'"{key}"\s*:\s*(\d+(?:\.\d+)?)', text)
         if m:
             try: result[key] = float(m.group(1)) if '.' in m.group(1) else int(m.group(1))
             except: result[key] = m.group(1)
-    for key in ['test_title','title','candidate_name','type','difficulty','language','feedback','feedback_summary','explanation','suggested_solution','suggested_answer_outline','subject_line','cover_letter','why_this_company','duration_estimate','time_complexity','space_complexity','pace','structure','overall_assessment','interview_id','job_title','company','job_id']:
+    
+    # Extract strings
+    for key in ['test_title','title','candidate_name','type','difficulty','language',
+                'feedback','feedback_summary','explanation','suggested_solution',
+                'suggested_answer_outline','subject_line','cover_letter','why_this_company',
+                'duration_estimate','time_complexity','space_complexity','pace','structure',
+                'overall_assessment','interview_id','job_title','company','job_id']:
         m = re.search(rf'"{key}"\s*:\s*"([^"]*)"', text)
         if m: result[key] = m.group(1)
-    for key in ['strengths','improvements','missing_skills','tips','areas_to_improve','questions','cover_letters','messages','linkedin_search_queries','recruiter_types','target_companies','networking_tips','hashtags_to_follow','key_skills_highlighted','follow_up_tips','hints','test_cases','expected_topics','good_answer_indicators','key_phrases_used','improvement_suggestions','filler_words','coding_questions','core_subject_questions','project_questions','behavioral_questions']:
+    
+    # Extract arrays
+    for key in ['strengths','improvements','missing_skills','tips','areas_to_improve',
+                'questions','cover_letters','messages','linkedin_search_queries',
+                'recruiter_types','target_companies','networking_tips','hashtags_to_follow',
+                'key_skills_highlighted','follow_up_tips','hints','test_cases',
+                'expected_topics','good_answer_indicators','key_phrases_used',
+                'improvement_suggestions','filler_words','coding_questions',
+                'core_subject_questions','project_questions','behavioral_questions']:
+        # Find array content
         arr_match = re.search(rf'"{key}"\s*:\s*\[(.*?)\]', text, re.DOTALL)
         if arr_match:
             items = re.findall(r'"([^"]*)"', arr_match.group(1))
             if items: result[key] = items
-    if 'match_score' not in result: result['match_score'] = 50
+    
+    # Extract evaluation_criteria
+    ec_match = re.search(r'"evaluation_criteria"\s*:\s*\{([^}]+)\}', text)
+    if ec_match:
+        criteria = {}
+        for m in re.finditer(r'"(\w+)"\s*:\s*(\d+)', ec_match.group(1)):
+            criteria[m.group(1)] = int(m.group(2))
+        if criteria: result['evaluation_criteria'] = criteria
+    
+    # Extract scoring_rubric
+    sr_match = re.search(r'"scoring_rubric"\s*:\s*\{([^}]+)\}', text)
+    if sr_match:
+        rubric = {}
+        for m in re.finditer(r'"(\w+)"\s*:\s*(\d+)', sr_match.group(1)):
+            rubric[m.group(1)] = int(m.group(2))
+        if rubric: result['scoring_rubric'] = rubric
+    
+    # Ensure minimum structure
+    if 'questions' not in result and 'coding_questions' not in result:
+        result['questions'] = [{"id":1,"question":"Tell me about your experience.","category":"general"}]
+    
+    if 'match_score' not in result:
+        result['match_score'] = 50
+    
+    logger.info(f"Manual extraction result keys: {list(result.keys())}")
     return result
 
 def generate_interview_questions(resume_text):
@@ -224,9 +301,94 @@ Resume: {resume_text[:3000]}"""
     return robust_json_parse(extract_json_from_response(r["message"]["content"]))
 
 # ============================================================
-# JOB SEARCH (kept same - omitted for brevity)
+# JOB SEARCH
 # ============================================================
-# [All job search functions remain the same]
+def fetch_jobs_adzuna(role,country="us",page=1,rpp=50):
+    if not ADZUNA_APP_ID or not ADZUNA_APP_KEY: return []
+    try:
+        u = f"https://api.adzuna.com/v1/api/jobs/{country}/search/{page}"
+        r = requests.get(u,params={"app_id":ADZUNA_APP_ID,"app_key":ADZUNA_APP_KEY,"results_per_page":min(rpp,100),"what":role},timeout=15)
+        r.raise_for_status()
+        return [{"source":"adzuna","job_id":j.get("id",uuid.uuid4().hex[:12]),"title":j.get("title",""),"company":j.get("company",{}).get("display_name",""),"location":j.get("location",{}).get("display_name",""),"description":j.get("description",""),"apply_link":j.get("redirect_url",""),"posted_at":j.get("created",""),"salary":f"${j.get('salary_min')}-{j.get('salary_max')}" if j.get('salary_min') else "","is_remote":"remote" in j.get("location",{}).get("display_name","").lower(),"contract_type":j.get("contract_type","")} for j in r.json().get("results",[])]
+    except: return []
+
+def fetch_jobs_remoteok(role):
+    try:
+        r = requests.get("https://remoteok.com/api",params={"tag":role.lower()},headers={"User-Agent":"Mozilla/5.0"},timeout=15)
+        r.raise_for_status(); d = r.json()
+        return [{"source":"remoteok","job_id":str(j.get("id",uuid.uuid4().hex[:12])),"title":j.get("position",""),"company":j.get("company",""),"location":"Remote","description":j.get("description",""),"apply_link":j.get("url",""),"posted_at":j.get("date",""),"salary":j.get("salary",""),"is_remote":True,"contract_type":j.get("employment_type","")} for j in d[1:] if isinstance(j,dict)]
+    except: return []
+
+def fetch_jobs_arbeitnow(role,location=""):
+    try:
+        p = {}
+        if role: p["search"]=role
+        if location: p["location"]=location
+        r = requests.get("https://www.arbeitnow.com/api/job-board-api",params=p,timeout=15)
+        r.raise_for_status()
+        return [{"source":"arbeitnow","job_id":j.get("slug",uuid.uuid4().hex[:12]),"title":j.get("title",""),"company":j.get("company_name",""),"location":f"{j.get('location','')}{' / Remote' if j.get('remote') else ''}","description":j.get("description",""),"apply_link":j.get("url",""),"posted_at":j.get("created_at",""),"salary":"","is_remote":j.get("remote",False),"contract_type":",".join(j.get("job_types",[]))} for j in r.json().get("data",[])]
+    except: return []
+
+def search_jobs_active_db(role,location="",country="worldwide",experience="",remote="",job_type="",date_posted="",page=1,limit=100):
+    if not ACTIVE_JOBS_API_KEY: raise RuntimeError("ACTIVE_JOBS_API_KEY not set")
+    ck = f"{role}|{location}|{country}|{experience}|{remote}|{job_type}|{date_posted}|{page}|{limit}"
+    cc = JOB_SEARCH_CACHE.get(ck)
+    if cc and (time.time()-cc[0])<JOB_SEARCH_CACHE_TTL: return cc[1]
+    off = (page-1)*limit
+    p = {"limit":str(min(limit,100)),"offset":str(off),"description_type":"text"}
+    if role: p["title_filter"]=role
+    if country!="worldwide" and country!="remote_only": p["location_filter"]=f"{location}, {SUPPORTED_COUNTRIES.get(country,country)}" if location else SUPPORTED_COUNTRIES.get(country,country)
+    elif location: p["location_filter"]=location
+    if experience in EXPERIENCE_FILTER_MAP: p["ai_experience_level_filter"]=EXPERIENCE_FILTER_MAP[experience]
+    if remote in WORK_ARRANGEMENT_MAP: p["ai_work_arrangement_filter"]=WORK_ARRANGEMENT_MAP[remote]
+    elif country=="remote_only": p["ai_work_arrangement_filter"]="Remote"
+    h = {"X-RapidAPI-Key":ACTIVE_JOBS_API_KEY,"X-RapidAPI-Host":ACTIVE_JOBS_HOST}
+    try:
+        r = requests.get(f"https://{ACTIVE_JOBS_HOST}/active-ats-7d",headers=h,params=p,timeout=30)
+        r.raise_for_status(); d = r.json()
+        if isinstance(d,list): jd,tc = d,len(d)
+        elif isinstance(d,dict): jd,tc = d.get("data",d.get("jobs",[])),d.get("total",d.get("count",len(d.get("data",d.get("jobs",[])))))
+        else: jd,tc = [],0
+        hm = tc>(off+limit) if tc>0 else len(jd)>=limit
+        tp = (tc+limit-1)//limit if tc>0 else 1
+        res = {"jobs":jd,"pagination":{"current_page":page,"total_pages":tp,"total_jobs":tc or len(jd),"has_next_page":hm,"has_previous_page":page>1,"limit":limit}}
+        JOB_SEARCH_CACHE[ck] = (time.time(),res)
+        return res
+    except: return {"jobs":[],"pagination":{"current_page":page,"total_pages":0,"total_jobs":0,"has_next_page":False,"has_previous_page":False,"limit":limit}}
+
+def normalize_active_db_job(job):
+    locs = job.get("locations") or []
+    ad = (locs[0].get("address") if locs else {}) or {}
+    return {"source":"active_jobs_db","job_id":str(job.get("id","")),"title":job.get("title",""),"company":job.get("organization",""),"location":ad.get("addressLocality",""),"city":ad.get("addressLocality",""),"country":ad.get("addressCountry",""),"is_remote":bool(_first_of(job,["ai_work_arrangement","remote_derived"],"") and "remote" in str(_first_of(job,["ai_work_arrangement","remote_derived"],"")).lower()),"apply_link":_first_of(job,["url","apply_url","job_url"],job.get("organization_url","")),"posted_at":job.get("date_posted",""),"description":_first_of(job,["description","description_text"],""),"salary":"","contract_type":""}
+
+def score_job_for_candidate(resume_text,job):
+    p = initialize_llm_provider(DEFAULT_MODEL)
+    mp = MODEL_PARAMETERS.get(DEFAULT_MODEL,{"temperature":0.2,"top_p":0.9})
+    jt = f"Title: {job.get('title','')}\nCompany: {job.get('company','')}\nLocation: {job.get('location','')} (Remote: {job.get('is_remote',False)})\nDescription: {(job.get('description','') or '')[:1500]}"
+    sm = "Score candidate fit. Return ONLY valid JSON: {\"match_score\":<0-100>,\"explanation\":\"text\",\"missing_skills\":[\"skill\"]}"
+    up = f"Score candidate against job.\nResume: {resume_text[:2000]}\nJob: {jt}"
+    cp = {"model":DEFAULT_MODEL,"messages":[{"role":"system","content":sm},{"role":"user","content":up}],"options":{"stream":False,"temperature":mp.get("temperature",0.2),"top_p":mp.get("top_p",0.9)}}
+    r = p.chat(**cp)
+    return robust_json_parse(extract_json_from_response(r["message"]["content"]))
+
+def aggregate_jobs_from_sources(role,location="",country="worldwide",experience="",remote="",job_type="",date_posted="",page=1,limit=50,sources=None):
+    if sources is None: sources = ["active_jobs_db"]
+    aj = []
+    if "active_jobs_db" in sources:
+        res = search_jobs_active_db(role=role,location=location,country=country,experience=experience,remote=remote,job_type=job_type,date_posted=date_posted,page=page,limit=limit)
+        aj.extend([normalize_active_db_job(j) for j in res.get("jobs",[])])
+    if "adzuna" in sources and len(aj)<limit: aj.extend(fetch_jobs_adzuna(role=role,country=country if country!="worldwide" else "us",page=page))
+    if "remoteok" in sources and (remote=="remote" or country=="remote_only"): aj.extend(fetch_jobs_remoteok(role=role))
+    if "arbeitnow" in sources and len(aj)<limit: aj.extend(fetch_jobs_arbeitnow(role=role,location=location))
+    if country and country!="worldwide" and country!="remote_only":
+        cn = SUPPORTED_COUNTRIES.get(country,country)
+        aj = [j for j in aj if cn.lower() in (j.get("country","")+j.get("location","")).lower()]
+    if remote=="remote" or country=="remote_only": aj = [j for j in aj if j.get("is_remote",False)]
+    if job_type and job_type in JOB_TYPES:
+        jtn = JOB_TYPES[job_type].lower()
+        aj = [j for j in aj if jtn in j.get("contract_type","").lower()]
+    tj = len(aj); tp = max(1,(tj+limit-1)//limit); si = (page-1)*limit
+    return {"jobs":aj[si:si+limit],"pagination":{"current_page":page,"total_pages":tp,"total_jobs":tj,"has_next_page":(si+limit)<tj,"has_previous_page":page>1,"limit":limit,"sources_used":sources}}
 
 # ============================================================
 # DATA MANAGEMENT
@@ -248,78 +410,45 @@ def set_job(jid,**kw):
     with JOBS_LOCK:
         if jid in JOBS: JOBS[jid].update(kw)
 
-def process_job(jid, pp, fn, jd, own):
+def process_job(jid,pp,fn,jd,own):
     try:
-        logger.info("========== START PROCESS ==========")
-
-        set_job(jid, status="running", step="Reading PDF...")
-
-        logger.info("Creating PDFHandler...")
-        ph = PDFHandler()
-
-        logger.info("Calling extract_json_from_pdf...")
-        rd = ph.extract_json_from_pdf(pp)
-
-        logger.info("Finished extract_json_from_pdf")
-
-        if not is_valid_resume_data(rd):
-            logger.error("Resume extraction failed")
-            set_job(jid, status="error", error="Could not extract resume")
-            return
-
-        logger.info("Starting AI analysis...")
-        set_job(jid, step="Analyzing resume with AI...")
-
-        gd = {}
+        set_job(jid,status="running",step="Reading PDF...")
+        ph = PDFHandler(); rd = ph.extract_json_from_pdf(pp)
+        if not is_valid_resume_data(rd): set_job(jid,status="error",error="Could not extract resume"); return
+        set_job(jid,step="Checking GitHub..."); gd = {}
         pr = rd.basics.profiles if rd.basics else []
-        gp = find_profile(pr, "Github")
-
+        gp = find_profile(pr,"Github")
         if gp:
-            try:
-                gd = fetch_and_display_github_info(gp.url)
-            except Exception as e:
-                logger.warning(f"GitHub fetch failed: {e}")
-
-        logger.info("Scoring resume...")
-        set_job(jid, step="Scoring resume...")
-
-        ev, rt = run_evaluation(rd, gd)
-        ed = evaluation_to_dict(ev)
-
-        cn = fn.replace(".pdf", "")
-        if rd.basics and rd.basics.name:
-            cn = rd.basics.name
-
-        res = {
-            "id": jid,
-            "owner": own,
-            "candidate_name": cn,
-            "file_name": fn,
-            "created_at": datetime.now(timezone.utc).isoformat(),
-            "evaluation": ed,
-            "resume_text": rt,
-            "resume_json": rd.model_dump() if hasattr(rd, "model_dump") else {}
-        }
-
+            try: gd = fetch_and_display_github_info(gp.url)
+            except: pass
+        set_job(jid,step="Scoring..."); ev,rt = run_evaluation(rd,gd); ed = evaluation_to_dict(ev)
+        cn = fn.replace(".pdf","")
+        if rd.basics and rd.basics.name: cn = rd.basics.name
+        res = {"id":jid,"owner":own,"candidate_name":cn,"file_name":fn,"created_at":datetime.now(timezone.utc).isoformat(),"evaluation":ed,"resume_text":rt,"resume_json":rd.model_dump() if hasattr(rd,"model_dump") else {}}
         res.update(compute_total_score(ed))
-
-        if jd:
-            res["job_match"] = match_job_description(rt, jd)
-            res["job_description"] = jd
-
-        with open(
-            os.path.join(app.config["HISTORY_FOLDER"], f"{jid}.json"),
-            "w",
-            encoding="utf-8"
-        ) as f:
-            json.dump(res, f, indent=2, ensure_ascii=False)
-
-        logger.info("Job completed successfully")
-        set_job(jid, status="done", step="Done", result=res)
-
+        if jd: res["job_match"]=match_job_description(rt,jd); res["job_description"]=jd
+        with open(os.path.join(app.config['HISTORY_FOLDER'],f"{jid}.json"),"w",encoding="utf-8") as f: json.dump(res,f,indent=2,ensure_ascii=False)
+        set_job(jid,status="done",step="Done",result=res)
     except Exception as e:
-        logger.exception("Evaluation failed")
-        set_job(jid, status="error", error=str(e))
+        logger.exception("Eval failed"); set_job(jid,status="error",error=str(e))
+
+def run_ai_job_search(jid,rt,role,location="",country="worldwide",experience="",remote="",job_type="",date_posted="",page=1,limit=50,sources=None):
+    try:
+        set_job(jid,status="running",step="Searching jobs...")
+        if sources is None: sources = ["active_jobs_db"]
+        sr = aggregate_jobs_from_sources(role=role,location=location,country=country,experience=experience,remote=remote,job_type=job_type,date_posted=date_posted,page=page,limit=min(limit,100),sources=sources)
+        rj = sr.get("jobs",[]); pg = sr.get("pagination",{})
+        if not rj: set_job(jid,status="done",step="Done",result={"jobs":[],"pagination":pg}); return
+        sj = []
+        for i,j in enumerate(rj,start=1):
+            set_job(jid,step=f"Scoring {i}/{len(rj)}...")
+            try: sc = score_job_for_candidate(rt,j)
+            except: continue
+            sj.append({"job_id":j.get("job_id"),"title":j.get("title",""),"company":j.get("company",""),"location":f"{j.get('location','')}, {j.get('country','')}".strip(", "),"is_remote":j.get("is_remote",False),"apply_link":j.get("apply_link",""),"posted_at":j.get("posted_at",""),"salary":j.get("salary",""),"source":j.get("source","unknown"),"match_score":sc.get("match_score",0),"explanation":sc.get("explanation",""),"missing_skills":sc.get("missing_skills",[])})
+        sj.sort(key=lambda x:x.get("match_score",0),reverse=True)
+        set_job(jid,status="done",step="Done",result={"jobs":sj,"pagination":pg})
+    except Exception as e:
+        logger.exception("Job search failed"); set_job(jid,status="error",error=str(e))
 
 # ============================================================
 # ROUTES - AUTH
@@ -380,8 +509,7 @@ def evaluate():
 @login_required_api
 def status(jid):
     with JOBS_LOCK: j = JOBS.get(jid)
-    # FIX: Return pending instead of 404
-    if not j: return jsonify({"status":"pending","step":"Initializing..."})
+    if not j: return jsonify({"success":False,"error":"Unknown job"}),404
     return jsonify(j)
 
 @app.route("/history")
@@ -441,7 +569,286 @@ def interview_questions(rid):
         return jsonify({"success":True,"data":{"interview_questions":qs}})
     except Exception as e: return jsonify({"success":False,"error":str(e)}),500
 
-# [All other routes remain the same - applications, job search, profile, SEO, features]
+# ============================================================
+# ROUTES - APPLICATIONS
+# ============================================================
+@app.route("/applications",methods=["GET"])
+@login_required_api
+def list_applications():
+    own = current_user_id()
+    return jsonify({"success":True,"data":[a for a in load_applications() if a.get("owner")==own]})
+
+@app.route("/applications",methods=["POST"])
+@login_required_api
+def add_application():
+    d = request.get_json(force=True) or {}
+    if not d.get("candidate_name") or not d.get("company"): return jsonify({"success":False,"error":"Name and company required"}),400
+    recs = load_applications()
+    rec = {"id":uuid.uuid4().hex[:12],"owner":current_user_id(),"candidate_id":d.get("candidate_id",""),"candidate_name":d.get("candidate_name",""),"company":d.get("company",""),"role":d.get("role",""),"status":d.get("status","Applied"),"date_applied":d.get("date_applied") or datetime.now(timezone.utc).date().isoformat(),"link":d.get("link",""),"notes":d.get("notes",""),"created_at":datetime.now(timezone.utc).isoformat()}
+    recs.append(rec); save_applications(recs)
+    return jsonify({"success":True,"data":rec})
+
+@app.route("/applications/<aid>",methods=["PATCH"])
+@login_required_api
+def update_application(aid):
+    d = request.get_json(force=True) or {}; recs = load_applications()
+    for r in recs:
+        if r["id"]==aid and r.get("owner")==current_user_id():
+            for f in ("status","role","company","link","notes","date_applied"):
+                if f in d: r[f]=d[f]
+            save_applications(recs); return jsonify({"success":True,"data":r})
+    return jsonify({"success":False,"error":"Not found"}),404
+
+@app.route("/applications/<aid>",methods=["DELETE"])
+@login_required_api
+def delete_application(aid):
+    own = current_user_id(); recs = load_applications()
+    recs = [r for r in recs if not (r["id"]==aid and r.get("owner")==own)]
+    save_applications(recs); return jsonify({"success":True,"deleted":True})
+
+# ============================================================
+# ROUTES - JOB SEARCH
+# ============================================================
+@app.route("/job_search/start",methods=["POST"])
+@login_required_api
+def job_search_start():
+    d = request.get_json(force=True) or {}
+    cid = d.get("candidate_id",""); role = d.get("role","").strip(); loc = d.get("location","").strip()
+    country = d.get("country","worldwide"); exp = d.get("experience",""); remote = d.get("remote","")
+    jt = d.get("job_type",""); dp = d.get("date_posted","")
+    page = max(1,int(d.get("page",1))); limit = min(100,max(10,int(d.get("limit",50))))
+    sources = d.get("sources",["active_jobs_db"])
+    if not cid: return jsonify({"success":False,"error":"Select a candidate"}),400
+    if not role: return jsonify({"success":False,"error":"Enter a role"}),400
+    p = os.path.join(app.config['HISTORY_FOLDER'],f"{secure_filename(cid)}.json")
+    if not os.path.exists(p): return jsonify({"success":False,"error":"Not found"}),404
+    with open(p,encoding="utf-8") as f: rec = json.load(f)
+    if rec.get("owner")!=current_user_id(): return jsonify({"success":False,"error":"Not found"}),404
+    rt = rec.get("resume_text")
+    if not rt: return jsonify({"success":False,"error":"No resume text"}),422
+    jid = uuid.uuid4().hex[:12]
+    with JOBS_LOCK: JOBS[jid] = {"status":"queued","step":"Queued..."}
+    threading.Thread(target=run_ai_job_search,args=(jid,rt,role,loc,country,exp,remote,jt,dp,page,limit,sources),daemon=True).start()
+    return jsonify({"success":True,"job_id":jid})
+
+@app.route("/job_search/filters",methods=["GET"])
+@login_required_api
+def get_search_filters():
+    return jsonify({"success":True,"data":{"countries":SUPPORTED_COUNTRIES,"experience_levels":EXPERIENCE_FILTER_MAP,"work_arrangements":WORK_ARRANGEMENT_MAP,"job_types":JOB_TYPES,"date_posted_filters":DATE_POSTED_FILTERS}})
+
+@app.route("/job_search/save",methods=["POST"])
+@login_required_api
+def job_search_save():
+    d = request.get_json(force=True) or {}; job = d.get("job") or {}
+    cn = d.get("candidate_name",""); cid = d.get("candidate_id","")
+    if not job.get("company") or not cn: return jsonify({"success":False,"error":"Missing info"}),400
+    recs = load_applications()
+    rec = {"id":uuid.uuid4().hex[:12],"owner":current_user_id(),"candidate_id":cid,"candidate_name":cn,"company":job.get("company",""),"role":job.get("title",""),"status":"Saved","date_applied":datetime.now(timezone.utc).date().isoformat(),"link":job.get("apply_link",""),"notes":f"AI match: {job.get('match_score','-')}%","match_score":job.get("match_score"),"source":f"ai_search","created_at":datetime.now(timezone.utc).isoformat()}
+    recs.append(rec); save_applications(recs)
+    return jsonify({"success":True,"data":rec})
+
+# ============================================================
+# ROUTES - PROFILE
+# ============================================================
+@app.route("/me")
+@login_required_api
+def me():
+    own = current_user_id(); users = load_users()
+    u = next((u for u in users if u["id"]==own),None)
+    if not u: return jsonify({"success":False,"error":"Not found"}),404
+    ec = sum(1 for fn in os.listdir(app.config['HISTORY_FOLDER']) if fn.endswith(".json") and json.load(open(os.path.join(app.config['HISTORY_FOLDER'],fn))).get("owner")==own)
+    ac = len([a for a in load_applications() if a.get("owner")==own])
+    return jsonify({"success":True,"data":{"username":u["username"],"email":u.get("email",""),"created_at":u.get("created_at"),"evaluations_count":ec,"applications_count":ac}})
+
+@app.route("/change_password",methods=["POST"])
+@login_required_api
+def change_password():
+    d = request.get_json(force=True) or {}
+    cp = d.get("current_password",""); np = d.get("new_password","")
+    if len(np)<6: return jsonify({"success":False,"error":"Min 6 chars"}),400
+    users = load_users(); own = current_user_id()
+    u = next((u for u in users if u["id"]==own),None)
+    if not u or not check_password_hash(u["password_hash"],cp): return jsonify({"success":False,"error":"Wrong password"}),400
+    u["password_hash"]=generate_password_hash(np); save_users(users)
+    return jsonify({"success":True,"message":"Updated"})
+
+# ============================================================
+# SEO & LEGAL
+# ============================================================
+@app.route('/privacy')
+def privacy(): return render_template('privacy.html')
+
+@app.route('/terms')
+def terms(): return render_template('terms.html')
+
+@app.route('/sitemap.xml')
+def sitemap():
+    bu = os.getenv('APP_URL','https://hiringagent.onrender.com')
+    pages = [{'url':'/','cf':'daily','pr':'1.0'},{'url':'/signup','cf':'monthly','pr':'0.9'},{'url':'/login','cf':'monthly','pr':'0.8'},{'url':'/app','cf':'weekly','pr':'0.7'},{'url':'/privacy','cf':'yearly','pr':'0.3'},{'url':'/terms','cf':'yearly','pr':'0.3'}]
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    for p in pages: xml += f'  <url>\n    <loc>{bu}{p["url"]}</loc>\n    <changefreq>{p["cf"]}</changefreq>\n    <priority>{p["pr"]}</priority>\n  </url>\n'
+    xml += '</urlset>'
+    r = make_response(xml); r.headers['Content-Type']='application/xml'; return r
+
+@app.route('/robots.txt')
+def robots():
+    bu = os.getenv('APP_URL','https://hiringagent.onrender.com')
+    rt = f'User-agent: *\nAllow: /\nDisallow: /uploads/\nDisallow: /evaluations/\nCrawl-delay: 1\nSitemap: {bu}/sitemap.xml'
+    r = make_response(rt); r.headers['Content-Type']='text/plain'; return r
+
+@app.route('/health')
+def health_check():
+    return jsonify({"status":"healthy","timestamp":datetime.now(timezone.utc).isoformat(),"version":"3.0.0"})
+
+# ============================================================
+# FEATURE 1: CODING ASSESSMENT
+# ============================================================
+@app.route("/coding/generate",methods=["POST"])
+@login_required_api
+def generate_coding_test():
+    d = request.get_json(force=True) or {}
+    rid = d.get("record_id",""); diff = d.get("difficulty","medium"); lang = d.get("language","")
+    if not rid: return jsonify({"success":False,"error":"Select a candidate"}),400
+    p = os.path.join(app.config['HISTORY_FOLDER'],f"{secure_filename(rid)}.json")
+    if not os.path.exists(p): return jsonify({"success":False,"error":"Not found"}),404
+    with open(p,encoding="utf-8") as f: rec = json.load(f)
+    rt = rec.get("resume_text","")
+    if not rt: return jsonify({"success":False,"error":"No resume text"}),422
+    pr = initialize_llm_provider(DEFAULT_MODEL)
+    sm = "Create coding tests. Return ONLY valid JSON, no markdown."
+    up = f"""Generate {diff} coding test. Language: {lang or 'relevant'}. Return:
+{{"test_title":"title","duration_minutes":45,"difficulty":"{diff}","language":"{lang or 'auto'}","questions":[{{"id":1,"title":"Q","description":"desc","example":{{"input":"in","output":"out"}},"test_cases":[{{"input":"in","expected_output":"out"}}],"hints":["hint"]}}],"evaluation_criteria":{{"correctness":40,"code_quality":30,"efficiency":20,"edge_cases":10}}}}
+Resume: {rt[:2000]}"""
+    cp = {"model":DEFAULT_MODEL,"messages":[{"role":"system","content":sm},{"role":"user","content":up}],"options":{"stream":False,"temperature":0.3,"top_p":0.9}}
+    try:
+        r = pr.chat(**cp); td = robust_json_parse(extract_json_from_response(r["message"]["content"]))
+        return jsonify({"success":True,"data":td})
+    except Exception as e: return jsonify({"success":False,"error":str(e)}),500
+
+@app.route("/coding/evaluate",methods=["POST"])
+@login_required_api
+def evaluate_coding_submission():
+    d = request.get_json(force=True) or {}
+    q = d.get("question",""); code = d.get("code",""); lang = d.get("language","python")
+    if not code: return jsonify({"success":False,"error":"No code"}),400
+    pr = initialize_llm_provider(DEFAULT_MODEL)
+    sm = "Code reviewer. Return ONLY valid JSON."
+    up = f"""Evaluate {lang} code. Return:
+{{"score":<0-100>,"feedback":"text","strengths":["s"],"improvements":["i"],"suggested_solution":"text"}}
+Q: {q}\nCode: {code[:2000]}"""
+    cp = {"model":DEFAULT_MODEL,"messages":[{"role":"system","content":sm},{"role":"user","content":up}],"options":{"stream":False,"temperature":0.1,"top_p":0.9}}
+    try:
+        r = pr.chat(**cp); ev = robust_json_parse(extract_json_from_response(r["message"]["content"]))
+        return jsonify({"success":True,"data":ev})
+    except Exception as e: return jsonify({"success":False,"error":str(e)}),500
+
+# ============================================================
+# FEATURE 2: NETWORKING
+# ============================================================
+@app.route("/networking/find-recruiters",methods=["POST"])
+@login_required_api
+def find_recruiters():
+    d = request.get_json(force=True) or {}
+    rid = d.get("record_id",""); role = d.get("role","").strip(); loc = d.get("location","").strip()
+    if not rid or not role: return jsonify({"success":False,"error":"Candidate and role required"}),400
+    p = os.path.join(app.config['HISTORY_FOLDER'],f"{secure_filename(rid)}.json")
+    if not os.path.exists(p): return jsonify({"success":False,"error":"Not found"}),404
+    with open(p,encoding="utf-8") as f: rec = json.load(f)
+    rt = rec.get("resume_text",""); pr = initialize_llm_provider(DEFAULT_MODEL)
+    sm = "Networking assistant. Return ONLY valid JSON."
+    up = f"""Generate networking strategy. Return:
+{{"linkedin_search_queries":["q1"],"target_companies":["c1"],"connection_message_templates":[{{"scenario":"s","subject":"s","message":"m"}}],"networking_tips":["tip"],"hashtags_to_follow":["#tag"]}}
+Candidate: {rt[:2000]}\nRole: {role}\nLocation: {loc or 'Any'}"""
+    cp = {"model":DEFAULT_MODEL,"messages":[{"role":"system","content":sm},{"role":"user","content":up}],"options":{"stream":False,"temperature":0.4,"top_p":0.9}}
+    try:
+        r = pr.chat(**cp); nd = robust_json_parse(extract_json_from_response(r["message"]["content"]))
+        return jsonify({"success":True,"data":nd})
+    except Exception as e: return jsonify({"success":False,"error":str(e)}),500
+
+@app.route("/networking/generate-message",methods=["POST"])
+@login_required_api
+def generate_connection_message():
+    d = request.get_json(force=True) or {}
+    rid = d.get("record_id",""); rn = d.get("recruiter_name","Hiring Manager")
+    rc = d.get("recruiter_company","company"); jt = d.get("job_title","")
+    if not rid: return jsonify({"success":False,"error":"Candidate required"}),400
+    p = os.path.join(app.config['HISTORY_FOLDER'],f"{secure_filename(rid)}.json")
+    with open(p,encoding="utf-8") as f: rec = json.load(f)
+    rt = rec.get("resume_text",""); cn = rec.get("candidate_name","Candidate")
+    pr = initialize_llm_provider(DEFAULT_MODEL)
+    sm = "LinkedIn expert. Return ONLY valid JSON."
+    up = f"""Generate LinkedIn message from {cn} to {rn} at {rc}. Return:
+{{"messages":[{{"style":"professional","message":"text"}},{{"style":"friendly","message":"text"}},{{"style":"direct","message":"text"}}],"follow_up_tips":["tip"]}}
+Background: {rt[:1500]}\nInterest: {jt or 'opportunities'}"""
+    cp = {"model":DEFAULT_MODEL,"messages":[{"role":"system","content":sm},{"role":"user","content":up}],"options":{"stream":False,"temperature":0.7,"top_p":0.9}}
+    try:
+        r = pr.chat(**cp); ms = robust_json_parse(extract_json_from_response(r["message"]["content"]))
+        return jsonify({"success":True,"data":ms})
+    except Exception as e: return jsonify({"success":False,"error":str(e)}),500
+
+# ============================================================
+# FEATURE 3: MOCK INTERVIEW
+# ============================================================
+@app.route("/interview/start",methods=["POST"])
+@login_required_api
+def start_mock_interview():
+    d = request.get_json(force=True) or {}
+    rid = d.get("record_id",""); itype = d.get("type","technical"); diff = d.get("difficulty","medium")
+    if not rid: return jsonify({"success":False,"error":"Select a candidate"}),400
+    p = os.path.join(app.config['HISTORY_FOLDER'],f"{secure_filename(rid)}.json")
+    with open(p,encoding="utf-8") as f: rec = json.load(f)
+    rt = rec.get("resume_text",""); cn = rec.get("candidate_name","Candidate")
+    pr = initialize_llm_provider(DEFAULT_MODEL)
+    sm = "Interviewer. Return ONLY valid JSON, no markdown."
+    up = f"""Generate {diff} {itype} interview for {cn}. Return:
+{{"interview_id":"mock-{uuid.uuid4().hex[:8]}","candidate_name":"{cn}","type":"{itype}","difficulty":"{diff}","duration_estimate":"30 min","questions":[{{"id":1,"category":"technical","question":"Question?","expected_topics":["topic"],"follow_up":"Follow-up?"}}],"scoring_rubric":{{"technical_accuracy":30,"communication":25,"problem_solving":25,"experience_depth":20}}}}
+Resume: {rt[:1500]}"""
+    cp = {"model":DEFAULT_MODEL,"messages":[{"role":"system","content":sm},{"role":"user","content":up}],"options":{"stream":False,"temperature":0.3,"top_p":0.9}}
+    try:
+        r = pr.chat(**cp); iv = robust_json_parse(extract_json_from_response(r["message"]["content"]))
+        return jsonify({"success":True,"data":iv})
+    except Exception as e: return jsonify({"success":False,"error":str(e)}),500
+
+@app.route("/interview/evaluate-answer",methods=["POST"])
+@login_required_api
+def evaluate_interview_answer():
+    d = request.get_json(force=True) or {}
+    q = d.get("question",""); a = d.get("answer",""); cat = d.get("category","technical")
+    if not a: return jsonify({"success":False,"error":"No answer"}),400
+    pr = initialize_llm_provider(DEFAULT_MODEL)
+    up = f"""Evaluate answer. Return:
+{{"overall_score":<0-100>,"strengths":["s"],"areas_to_improve":["a"],"feedback_summary":"text","tips":["tip"]}}
+Q: {q}\nA: {a[:1500]}"""
+    cp = {"model":DEFAULT_MODEL,"messages":[{"role":"user","content":up}],"options":{"stream":False,"temperature":0.3,"top_p":0.9}}
+    try:
+        r = pr.chat(**cp); ev = robust_json_parse(extract_json_from_response(r["message"]["content"]))
+        return jsonify({"success":True,"data":ev})
+    except Exception as e: return jsonify({"success":False,"error":str(e)}),500
+
+# ============================================================
+# FEATURE 4: COVER LETTER
+# ============================================================
+@app.route("/cover-letter/generate",methods=["POST"])
+@login_required_api
+def generate_cover_letter():
+    d = request.get_json(force=True) or {}
+    rid = d.get("record_id",""); jt = d.get("job_title","").strip(); comp = d.get("company_name","").strip()
+    jd = d.get("job_description","").strip()
+    if not rid or not jt or not comp: return jsonify({"success":False,"error":"Candidate, title, company required"}),400
+    p = os.path.join(app.config['HISTORY_FOLDER'],f"{secure_filename(rid)}.json")
+    if not os.path.exists(p): return jsonify({"success":False,"error":"Not found"}),404
+    with open(p,encoding="utf-8") as f: rec = json.load(f)
+    rt = rec.get("resume_text",""); cn = rec.get("candidate_name","Candidate")
+    pr = initialize_llm_provider(DEFAULT_MODEL)
+    sm = "Cover letter writer. Return ONLY valid JSON."
+    up = f"""Generate cover letter for {cn} - {jt} at {comp}. Return:
+{{"candidate_name":"{cn}","job_title":"{jt}","company":"{comp}","cover_letter":"Full letter text","key_skills_highlighted":["skill"],"subject_line":"Subject","tips":["tip"]}}
+Resume: {rt[:2000]}\nJob: {jd[:1000] or 'Not provided'}"""
+    cp = {"model":DEFAULT_MODEL,"messages":[{"role":"system","content":sm},{"role":"user","content":up}],"options":{"stream":False,"temperature":0.7,"top_p":0.9}}
+    try:
+        r = pr.chat(**cp); cl = robust_json_parse(extract_json_from_response(r["message"]["content"]))
+        return jsonify({"success":True,"data":cl})
+    except Exception as e: return jsonify({"success":False,"error":str(e)}),500
 
 # ============================================================
 # ERROR HANDLERS
@@ -456,7 +863,7 @@ def server_error(e):
     return jsonify({"success":False,"error":"Server error"}),500
 
 # ============================================================
-# PDF BUILDER & MAIN
+# PDF BUILDER
 # ============================================================
 def build_pdf_report(rec,op):
     from reportlab.lib.pagesizes import letter
@@ -467,8 +874,9 @@ def build_pdf_report(rec,op):
     ss = getSampleStyleSheet()
     h1 = ParagraphStyle("H1",parent=ss["Title"],fontSize=20,spaceAfter=4)
     sb = ParagraphStyle("Sub",parent=ss["Normal"],textColor=colors.grey,spaceAfter=14)
+    h2 = ParagraphStyle("H2",parent=ss["Heading2"],spaceBefore=14,spaceAfter=6)
     bd = ParagraphStyle("Body",parent=ss["Normal"],fontSize=10,leading=14)
-    st = [Paragraph(rec.get("candidate_name","Candidate"),h1),Paragraph(f"Report - {rec.get('created_at','')[:19].replace('T',' ')} UTC",sb),Paragraph(f"<b>Score: {rec.get('total_score')}/{rec.get('max_score')}</b>",ss["Heading2"]),Spacer(1,10)]
+    st = [Paragraph(rec.get("candidate_name","Candidate"),h1),Paragraph(f"Report &middot; {rec.get('created_at','')[:19].replace('T',' ')} UTC",sb),Paragraph(f"<b>Score: {rec.get('total_score')}/{rec.get('max_score')}</b>",ss["Heading2"]),Spacer(1,10)]
     ev = rec.get("evaluation") or {}; sc = ev.get("scores") or {}
     td = [["Category","Score","Max","Evidence"]]
     for k,fm in CATEGORY_MAX.items():
@@ -479,6 +887,9 @@ def build_pdf_report(rec,op):
     st.append(tb)
     SimpleDocTemplate(op,pagesize=letter,topMargin=0.7*inch,bottomMargin=0.7*inch).build(st)
 
+# ============================================================
+# MAIN
+# ============================================================
 if __name__ == "__main__":
     port = int(os.getenv("PORT",5000))
     debug = os.getenv("FLASK_ENV","development")=="development"
